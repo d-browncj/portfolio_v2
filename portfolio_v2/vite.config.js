@@ -1,0 +1,1 @@
+export default { base: '/portfolio_v2/' }
