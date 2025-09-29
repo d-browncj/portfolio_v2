@@ -54,8 +54,8 @@
                 </div>
             </div>
         </div>
-        <div id="section-container">
-            <div id="left-section">
+        <div id="layout">
+            <aside id="sidebar">
                 <header class="container selected-frame" id="home">
                     <div class="container-content">
                         <div class="title decorating-text">
@@ -192,73 +192,130 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="right-section">
-                <div class="container h-fill" id="main-content">
+                <div class="container" id="certifications">
                     <div class="container-content">
-                        <div id="logo-container">
-                            <img loading="eager" src="images/logo2.svg" id="logo" alt="Wallenart" decoding="async" />
+                        <div id="certifications-title" class="title decorating-text">
+                            <p>
+                                Certifications
+                            </p>
+                            <div></div>
                         </div>
-                        <div class="outer-paragraph-container">
-                            <div class="inner-paragraph-container">
-                                <div>
-                                    <p>Hi, I'm <span class="text-blue">Arthur</span> Wallendorff 🤙</p>
-                                    <p>A <span class="text-orange">backend-focused</span> software engineer and
-                                        <span class="text-orange">father</span>.
-                                    </p>
+                        <div id="certifications-index" class="list-index decorating-text">
+                            <p>1 of 12</p>
+                            <div></div>
+                        </div>
+                        <div class="ui-list">
+                            <div>AWS Solutions Architect Associate</div>
+                            <div>Google Cloud Professional Cloud Architect</div>
+                            <div>Microsoft Azure Fundamentals</div>
+                            <div>Kubernetes Administrator (CKA)</div>
+                            <div>Docker Certified Associate</div>
+                            <div>Terraform Associate</div>
+                            <div>Certified Information Systems Security Professional</div>
+                            <div>Certified Ethical Hacker (CEH)</div>
+                            <div>CompTIA Security+</div>
+                            <div>Certified Scrum Master (CSM)</div>
+                            <div>Project Management Professional (PMP)</div>
+                            <div>ITIL 4 Foundation</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main id="content">
+                <!-- Desktop Window -->
+                <div class="desktop-window">
+                    <div class="window-header">
+                        <div class="window-title">Arthur Wallendorff - Portfolio Terminal</div>
+                        <div class="window-controls">
+                            <div class="window-control close"></div>
+                            <div class="window-control minimize"></div>
+                            <div class="window-control maximize"></div>
+                        </div>
+                    </div>
+                    <div class="window-content">
+                        <div class="container h-fill" id="main-content">
+                            <div class="container-content">
+                                <div id="logo-container">
+                                    <img loading="eager" src="images/logo2.svg" id="logo" alt="Wallenart" decoding="async" />
                                 </div>
-                                <div>
-                                    <p>Although my focus is on backend, most of my professional experience has
-                                        been as a
-                                        <span class="text-pink">full-stack</span> developer.
-                                    </p>
-                                    <p>I also enjoy programming low level stuff, like <span class="text-pink">C</span>
-                                        and tinkering with <span class="text-pink">electronics</span>.</p>
-                                </div>
-                                <div>
-                                    <p>Another great interest of mine is <span class="text-orange">UX
-                                            design</span>,
-                                        that I like to approach in a broader sense and not only through user
-                                        interfaces.
-                                    </p>
-                                    <p>I'm a <span class="text-pink">passionate</span> developer, always looking
-                                        for new
-                                        challenges and opportunities to learn.</p>
-                                </div>
-                                <div>
-                                    <p>Nowadays, you can find me on <a href="https://x.com/AutisticOvrflow"
-                                            target="_blank" class="text-orange">X (Twitter)</a>.</p>
-                                    <p>If you like cringe-inducing experiences, feel free to connect on <a
-                                            href="https://www.linkedin.com/in/wallenart/" target="_blank"
-                                            class="text-blue">LinkedIn</a>.</p>
-                                    <p>You can always check out my work
-                                        on <a href="https://www.github.com/zyriab/" target="_blank"
-                                            class="text-pink">GitHub</a>.</p>
-                                </div>
-                                <div id="desktop-help">
-                                    <p><span class="text-pink">Click</span> on a section on the left to learn
-                                        more about
-                                        my <span class="text-blue">work</span> and past <span
-                                            class="text-orange">experiences</span>.</p>
-                                    <p>You can also <span class="text-orange">navigate</span> through the
-                                        sections using
-                                        the <span class="text-blue">arrow keys</span> or <span class="text-orange">Vim
-                                            motions</span>.</p>
-                                </div>
-                                <p id="mobile-help">
-                                    <span class="text-pink">Press</span> the menu button at the top-right of the
-                                    screen
-                                    to
-                                    start <span class="text-orange">exploring</span>
-                                    the website.
-                                </p>
-                                <div class="bible-verse">
+                                <div class="outer-paragraph-container">
+                                    <div class="inner-paragraph-container">
+                                        <div>
+                                            <p>Hi, I'm <span class="text-blue">Arthur</span> Wallendorff 🤙</p>
+                                            <p>A <span class="text-orange">backend-focused</span> software engineer and
+                                                <span class="text-orange">father</span>.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p>Although my focus is on backend, most of my professional experience has
+                                                been as a
+                                                <span class="text-pink">full-stack</span> developer.
+                                            </p>
+                                            <p>I also enjoy programming low level stuff, like <span class="text-pink">C</span>
+                                                and tinkering with <span class="text-pink">electronics</span>.</p>
+                                        </div>
+                                        <div>
+                                            <p>Another great interest of mine is <span class="text-orange">UX
+                                                    design</span>,
+                                                that I like to approach in a broader sense and not only through user
+                                                interfaces.
+                                            </p>
+                                            <p>I'm a <span class="text-pink">passionate</span> developer, always looking
+                                                for new
+                                                challenges and opportunities to learn.</p>
+                                        </div>
+                                        <div>
+                                            <p>Nowadays, you can find me on <a href="https://x.com/AutisticOvrflow"
+                                                    target="_blank" class="text-orange">X (Twitter)</a>.</p>
+                                            <p>If you like cringe-inducing experiences, feel free to connect on <a
+                                                    href="https://www.linkedin.com/in/wallenart/" target="_blank"
+                                                    class="text-blue">LinkedIn</a>.</p>
+                                            <p>You can always check out my work
+                                                on <a href="https://www.github.com/zyriab/" target="_blank"
+                                                    class="text-pink">GitHub</a>.</p>
+                                        </div>
+                                        <div id="desktop-help">
+                                            <p><span class="text-pink">Click</span> the taskbar below to explore different sections of my
+                                                portfolio.</p>
+                                            <p>You can also <span class="text-orange">navigate</span> using
+                                                <span class="text-blue">arrow keys</span> or <span class="text-orange">Vim
+                                                    motions</span>.</p>
+                                        </div>
+                                        <p id="mobile-help">
+                                            <span class="text-pink">Press</span> the menu button at the top-right of the
+                                            screen
+                                            to
+                                            start <span class="text-orange">exploring</span>
+                                            the website.
+                                        </p>
+                                        <div class="bible-verse">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- OS-like Taskbar -->
+                <div class="os-taskbar">
+                    <div class="os-taskbar-item active" data-section="home">
+                        <span>🏠</span> Home
+                    </div>
+                    <div class="os-taskbar-item" data-section="experience">
+                        <span>💼</span> Experience
+                    </div>
+                    <div class="os-taskbar-item" data-section="projects">
+                        <span>🚀</span> Projects
+                    </div>
+                    <div class="os-taskbar-item" data-section="skills">
+                        <span>⚡</span> Skills
+                    </div>
+                    <div class="os-taskbar-item" data-section="certifications">
+                        <span>🏆</span> Certifications
+                    </div>
+                </div>
+            </main>
         </div>
         <footer class="container text-blue" id="footer">
             <div class="footer-item" id="footer-help">

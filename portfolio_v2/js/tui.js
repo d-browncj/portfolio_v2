@@ -1,12 +1,14 @@
 const MAIN_CONTAINER = document.getElementById("main-container");
-const SECTION_CONTAINER = document.getElementById("section-container");
-const LEFT_SECTION = document.getElementById("left-section");
-const RIGHT_SECTION = document.getElementById("right-section");
+const LAYOUT = document.getElementById("layout");
+const SIDEBAR = document.getElementById("sidebar");
+const CONTENT = document.getElementById("content");
+const SIDEBAR_TOGGLE = document.getElementById("sidebar-toggle");
 
 const HOME_SECTION = document.getElementById("home");
 const SKILLS_SECTION = document.getElementById("skills");
 const EXPERIENCE_SECTION = document.getElementById("experience");
 const PROJECTS_SECTION = document.getElementById("projects");
+const CERTIFICATIONS_SECTION = document.getElementById("certifications");
 const FOOTER_SECTION = document.getElementById("footer");
 const MAIN_CONTENT_SECTION = document
   .getElementById("main-content")
@@ -31,6 +33,11 @@ const left_sections = [
     section: SKILLS_SECTION,
     items: [...SKILLS_SECTION.firstElementChild.children[2].children],
   },
+  {
+    name: "certifications",
+    section: CERTIFICATIONS_SECTION,
+    items: [...CERTIFICATIONS_SECTION.firstElementChild.children[2].children],
+  },
 ];
 
 const currentPosition = {
@@ -45,6 +52,56 @@ const previousPosition = {
 
 function clamp(min, value, max) {
   return Math.min(Math.max(min, value), max);
+}
+
+function scrollContentTop() {
+  if (!CONTENT) return;
+  // Use smooth scrolling when switching sections
+  CONTENT.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleSidebar() {
+  if (!LAYOUT) return;
+  LAYOUT.classList.toggle('sidebar-open');
+}
+
+function updateTaskbarActive(sectionName) {
+  // Remove active class from all taskbar items
+  document.querySelectorAll('.os-taskbar-item').forEach(item => {
+    item.classList.remove('active');
+  });
+
+  // Add active class to current section
+  const activeItem = document.querySelector(`[data-section="${sectionName}"]`);
+  if (activeItem) {
+    activeItem.classList.add('active');
+  }
+}
+
+function initTaskbarListeners() {
+  // Handle taskbar section clicks
+  document.querySelectorAll('.os-taskbar-item[data-section]').forEach(item => {
+    item.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const sectionName = item.dataset.section;
+
+      // Find section index by name
+      const sectionIndex = left_sections.findIndex(s => s.name === sectionName);
+      if (sectionIndex !== -1) {
+        goToSection(sectionIndex, 0);
+        await render(true);
+        updateTaskbarActive(sectionName);
+      }
+    });
+  });
+
+  // Handle sidebar toggle
+  if (SIDEBAR_TOGGLE) {
+    SIDEBAR_TOGGLE.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleSidebar();
+    });
+  }
 }
 
 function isMobile() {
@@ -227,10 +284,10 @@ function onHamburgerMenuPress() {
     document.getElementsByClassName("nav-container")[0];
 
   if (hamburgerButtonElement.checked) {
-    LEFT_SECTION.classList.add("menu-open");
+    SIDEBAR.classList.add("menu-open");
     navContainerElement.style.opacity = 1;
   } else {
-    LEFT_SECTION.classList.remove("menu-open");
+    SIDEBAR.classList.remove("menu-open");
     navContainerElement.style.opacity = 0.9;
   }
 }
@@ -239,7 +296,7 @@ function closeHamburgerMenu() {
   const hamburgerButtonElement =
     document.getElementsByName("hamburger-toggle")[0];
   hamburgerButtonElement.checked = false;
-  LEFT_SECTION.classList.remove("menu-open");
+  SIDEBAR.classList.remove("menu-open");
 }
 
 function clearMainContent() {
@@ -416,8 +473,6 @@ async function displayContent() {
 
     outerContainerElement.appendChild(innerContainerElement);
     MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
-
-    await displayRandomBibleVerse(innerContainerElement);
   }
 }
 
@@ -517,6 +572,12 @@ async function render(scrollToTop = false, isInitialRender = false) {
 
   if (!isInitialRender) {
     displayContent();
+    // Scroll content pane to top when switching sections
+    if (currentPosition.sectionIndex !== previousPosition.sectionIndex) {
+      requestAnimationFrame(scrollContentTop);
+      // Update taskbar active state
+      updateTaskbarActive(left_sections[currentPosition.sectionIndex].name);
+    }
   }
 
   if (isMobile()) {
@@ -649,6 +710,7 @@ function initMouseListeners() {
   left_sections.forEach((section, sectionIndex) => {
     section.items.forEach((item, itemIndex) => {
       item.addEventListener("click", async (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
         event.stopPropagation();
 
         goToSection(sectionIndex, itemIndex);
@@ -656,7 +718,8 @@ function initMouseListeners() {
       });
     });
 
-    section.section.addEventListener("click", async () => {
+    section.section.addEventListener("click", async (event) => {
+      event.preventDefault(); // Prevent default anchor behavior
       goToSection(sectionIndex);
       await render(sectionIndex !== previousPosition.sectionIndex);
     });
@@ -680,9 +743,12 @@ async function init() {
   initKeyboardListeners();
   initMouseListeners();
   initTouchListeners();
+  initTaskbarListeners();
 
   await render(true, true);
-  await displayRandomBibleVerse();
+
+  // Initialize taskbar to show home as active
+  updateTaskbarActive('home');
 }
 
 /** HIGHLIGHTING STUFF **/
