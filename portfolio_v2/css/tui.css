@@ -125,7 +125,7 @@ svg {
   overflow-y: auto;
   background: rgba(13, 17, 23, 0.95);
   backdrop-filter: blur(10px);
-  border-right: 1px solid var(--clr-border-inactive);
+  border-right: none;
 }
 
 #content {
@@ -190,9 +190,8 @@ svg {
   bottom: 0.5rem; /* Use minimal bottom margin since buttons are floating */
   background: rgba(13, 17, 23, 0.95);
   backdrop-filter: blur(15px);
-  border: 1px solid var(--clr-border-inactive);
-  border-right: none;
-  border-radius: 8px 0 0 8px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -200,7 +199,7 @@ svg {
 .window-header {
   height: 40px;
   background: rgba(30, 66, 115, 0.8);
-  border-bottom: 1px solid var(--clr-border-inactive);
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -246,11 +245,11 @@ svg {
   align-items: center;
   overflow: visible;
   height: 100%;
-  padding-bottom: 120px; /* Add bottom padding for floating buttons */
+  padding-bottom: 250px; /* Add bottom padding for floating buttons */
 }
 
 #main-content .container-content {
-  overflow: hidden;
+  overflow: visible;
   line-height: 1.6rem;
   gap: 1rem;
   padding: 1rem;
@@ -313,7 +312,7 @@ svg {
 .outer-paragraph-container {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
@@ -324,8 +323,9 @@ svg {
   gap: 1.5rem;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
+  margin-bottom: 4rem;
 }
 
 .image-container {
@@ -364,7 +364,7 @@ pre {
 }
 
 .snippet-container {
-  margin-top: 4rem;
+  margin: 4rem 0 5rem 0;
 }
 
 .scrollable {
@@ -500,40 +500,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   font-size: 0.6rem;
 }
 
-.bible-verse {
-  margin-top: 2rem;
-  font-style: italic;
-  padding: 1.5rem 2rem;
-  border: 1px solid var(--clr-border);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
-  position: relative;
-}
-
-.bible-verse > button {
-  all: unset;
-  cursor: pointer;
-  padding: 0.5rem;
-  width: 16px;
-  aspect-ratio: 1/1;
-
-  position: absolute;
-  top: -1.5rem;
-  left: -1rem;
-  z-index: 10;
-  background-color: var(--clr-primary-txt);
-
-  mask: url(/images/reload.svg);
-  mask-repeat: no-repeat;
-}
-
-.reference {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: var(--clr-blue);
-}
 
 .technologies-row {
   display: flex;
@@ -547,7 +513,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0 5rem 0;
 }
 
 .project-button {
@@ -733,9 +699,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
     display: none;
   }
 
-  .bible-verse {
-    width: initial;
-  }
 
   /* NAVBAR */
   .nav-container {

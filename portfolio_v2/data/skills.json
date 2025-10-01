@@ -49,10 +49,10 @@
       "content": [
         "JavaScript is the {{cogs}} of the world wide web. It is used to {{power}} the content of a {{website}} and make things {{interactive}}.",
         "I have been using JavaScript for nearly {{10 years}} and I am very familiar with it. I have used it to build all kind of solutions, from {{websites}} to {{mobile apps}}, even desktop applications like {{video games}}.",
-        "There is a joke about JavaScript that goes like this: {{JavaScript}} is so {{fast}} that it can {{render}} a {{progress bar}} in {{1 second}}.",
-        "People who tend to {{like}} JavaScript usually end up trying to write everything in JavaScript. This is called {{JavaScript fatigue}}.\nI personally prefer to use the right tool for the right job and tend to use JavaScript when {{time}} is of the essence and I want to quickly {{iterate}} over a piece of software.\nIt's excellent for {{prototyping}} and {{rapid development}}.}}",
-        "The legend says that {{Brendan Eich}} created JavaScript in {{10 days}}. That would explain why it is so {{messy}} and {{weird}}.",
-        "If I were {{Abby Peterson}}, JavaScript would be my {{chainsaw}}."
+        "JavaScript's {{asynchronous}} nature and {{event-driven}} architecture make it highly effective for {{dynamic}} web applications.",
+        "While JavaScript can be used for many different types of applications, I prefer to use the {{right tool}} for the right job. I tend to use JavaScript when {{time}} is of the essence and I want to quickly {{iterate}} over a piece of software.\nIt's excellent for {{prototyping}} and {{rapid development}}.",
+        "JavaScript was created by {{Brendan Eich}} and has evolved significantly over the years with modern {{ECMAScript}} standards.",
+        "JavaScript remains one of my {{go-to}} languages for {{web development}} and {{cross-platform}} applications."
       ],
       "snippet": "js"
     },
@@ -62,8 +62,8 @@
         "TypeScript is JavaScript with {{types}}. It is used to {{prevent}} errors and make JavaScript {{predictable}}.",
         "As you can see in the code snippet below, it is almost {{identical}} to JavaScript. The only difference is that it has {{types}} and a few other {{goodies}} sprinkled around for good measure.\nI have been using TypeScript for over {{2 years}} and I am very familiar with it.",
         "If I have time to setup a {{build pipeline}} and I want to make sure that my code is {{robust}} and {{predictable}}, I will use TypeScript over JavaScript.",
-        "{{Types}} represent the {{intent}} of the programmer. They are a {{contract}} between the programmer and the compiler/transpiler.\nThey make working and maintaining bigger software much easier and {{safe}}.\n{{Transitioning}} from JavaScript to TypeScript was very {{easy}} since most of my past experience has been with {{strongly typed}} languages, programming without types actually feels {{weird}} to me.",
-        "If I were {{Tenzing Norgay}}, TypeScript would be my {{belay device}}."
+        "{{Types}} represent the {{intent}} of the programmer. They are a {{contract}} between the programmer and the compiler/transpiler.\nThey make working and maintaining bigger software much easier and {{safe}}.\n{{Transitioning}} from JavaScript to TypeScript was very {{easy}} since most of my past experience has been with {{strongly typed}} languages, programming without types feels less {{structured}} to me.",
+        "TypeScript provides the {{reliability}} and {{maintainability}} essential for {{large-scale}} applications."
       ],
       "snippet": "ts"
     },
