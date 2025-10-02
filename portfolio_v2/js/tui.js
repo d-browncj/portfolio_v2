@@ -3,6 +3,8 @@ const LAYOUT = document.getElementById("layout");
 const SIDEBAR = document.getElementById("sidebar");
 const CONTENT = document.getElementById("content");
 const SIDEBAR_TOGGLE = document.getElementById("sidebar-toggle");
+const SIDEBAR_SCROLLBAR = document.getElementById("sidebar-scrollbar");
+const SIDEBAR_SCROLLBAR_THUMB = document.getElementById("sidebar-scrollbar-thumb");
 
 const HOME_SECTION = document.getElementById("home");
 const SKILLS_SECTION = document.getElementById("skills");
@@ -15,6 +17,17 @@ const MAIN_CONTENT_SECTION = document
   ?.getElementsByClassName("container-content")[0];
 
 const COLORS = ["text-blue", "text-orange", "text-pink"];
+
+const SIDEBAR_SCROLLBAR_STATE = {
+  rafId: null,
+  isDragging: false,
+  dragPointerId: null,
+  dragStartY: 0,
+  dragStartOffset: 0,
+  resizeObserver: null,
+};
+
+const SIDEBAR_SCROLLBAR_MIN_THUMB = 48;
 
 const left_sections = [
   { name: "home", section: HOME_SECTION, items: [] },
@@ -54,6 +67,193 @@ function clamp(min, value, max) {
   return Math.min(Math.max(min, value), max);
 }
 
+function scheduleSidebarScrollbarUpdate() {
+  if (SIDEBAR_SCROLLBAR_STATE.rafId != null) {
+    return;
+  }
+
+  SIDEBAR_SCROLLBAR_STATE.rafId = requestAnimationFrame(() => {
+    SIDEBAR_SCROLLBAR_STATE.rafId = null;
+    updateSidebarScrollbar();
+  });
+}
+
+function updateSidebarScrollbar() {
+  if (
+    SIDEBAR == null ||
+    SIDEBAR_SCROLLBAR == null ||
+    SIDEBAR_SCROLLBAR_THUMB == null
+  ) {
+    return;
+  }
+
+  const scrollHeight = SIDEBAR.scrollHeight;
+  const clientHeight = SIDEBAR.clientHeight;
+  const trackHeight = SIDEBAR_SCROLLBAR.clientHeight;
+  const maxScrollTop = Math.max(0, scrollHeight - clientHeight);
+
+  if (trackHeight <= 0 || maxScrollTop <= 0) {
+    SIDEBAR_SCROLLBAR.classList.remove("is-visible");
+    SIDEBAR_SCROLLBAR.dataset.maxScrollTop = "0";
+    SIDEBAR_SCROLLBAR.dataset.maxThumbOffset = "0";
+    SIDEBAR_SCROLLBAR.dataset.thumbOffset = "0";
+    SIDEBAR_SCROLLBAR.dataset.thumbHeight = "0";
+    SIDEBAR_SCROLLBAR_THUMB.style.height = "0px";
+    SIDEBAR_SCROLLBAR_THUMB.style.transform = "translateY(0)";
+    return;
+  }
+
+  const thumbHeight = Math.max(
+    Math.round((clientHeight / scrollHeight) * trackHeight),
+    SIDEBAR_SCROLLBAR_MIN_THUMB,
+  );
+
+  const maxThumbOffset = Math.max(0, trackHeight - thumbHeight);
+  const thumbOffset =
+    maxThumbOffset === 0
+      ? 0
+      : (SIDEBAR.scrollTop / maxScrollTop) * maxThumbOffset;
+
+  SIDEBAR_SCROLLBAR.classList.add("is-visible");
+  SIDEBAR_SCROLLBAR_THUMB.style.height = `${thumbHeight}px`;
+  SIDEBAR_SCROLLBAR_THUMB.style.transform = `translateY(${thumbOffset}px)`;
+
+  SIDEBAR_SCROLLBAR.dataset.maxScrollTop = `${maxScrollTop}`;
+  SIDEBAR_SCROLLBAR.dataset.maxThumbOffset = `${maxThumbOffset}`;
+  SIDEBAR_SCROLLBAR.dataset.thumbOffset = `${thumbOffset}`;
+  SIDEBAR_SCROLLBAR.dataset.thumbHeight = `${thumbHeight}`;
+}
+
+function setSidebarScrollTopFromThumbOffset(offset) {
+  if (SIDEBAR == null || SIDEBAR_SCROLLBAR == null) {
+    return;
+  }
+
+  const maxScrollTop = parseFloat(SIDEBAR_SCROLLBAR.dataset.maxScrollTop || "0");
+  const maxThumbOffset = parseFloat(
+    SIDEBAR_SCROLLBAR.dataset.maxThumbOffset || "0",
+  );
+
+  if (maxScrollTop <= 0) {
+    return;
+  }
+
+  const adjustedOffset = clamp(0, offset, maxThumbOffset);
+  const scrollTop =
+    maxThumbOffset === 0
+      ? 0
+      : (adjustedOffset / maxThumbOffset) * maxScrollTop;
+
+  SIDEBAR.scrollTop = scrollTop;
+}
+
+function handleSidebarThumbPointerDown(event) {
+  if (
+    SIDEBAR_SCROLLBAR_THUMB == null ||
+    SIDEBAR_SCROLLBAR_STATE.isDragging
+  ) {
+    return;
+  }
+
+  SIDEBAR_SCROLLBAR_STATE.isDragging = true;
+  SIDEBAR_SCROLLBAR_STATE.dragPointerId = event.pointerId;
+  SIDEBAR_SCROLLBAR_STATE.dragStartY = event.clientY;
+  SIDEBAR_SCROLLBAR_STATE.dragStartOffset = parseFloat(
+    SIDEBAR_SCROLLBAR.dataset.thumbOffset || "0",
+  );
+
+  try {
+    SIDEBAR_SCROLLBAR_THUMB.setPointerCapture(event.pointerId);
+  } catch (error) {
+    /* noop - pointer capture is not critical for scroll syncing */
+  }
+
+  event.preventDefault();
+}
+
+function handleSidebarThumbPointerMove(event) {
+  if (
+    SIDEBAR_SCROLLBAR_STATE.isDragging === false ||
+    SIDEBAR_SCROLLBAR_STATE.dragPointerId !== event.pointerId
+  ) {
+    return;
+  }
+
+  const delta = event.clientY - SIDEBAR_SCROLLBAR_STATE.dragStartY;
+  const targetOffset =
+    SIDEBAR_SCROLLBAR_STATE.dragStartOffset + delta;
+
+  setSidebarScrollTopFromThumbOffset(targetOffset);
+}
+
+function resetSidebarThumbDragState() {
+  SIDEBAR_SCROLLBAR_STATE.isDragging = false;
+  SIDEBAR_SCROLLBAR_STATE.dragPointerId = null;
+  SIDEBAR_SCROLLBAR_STATE.dragStartY = 0;
+  SIDEBAR_SCROLLBAR_STATE.dragStartOffset = 0;
+}
+
+function handleSidebarThumbPointerUp(event) {
+  if (
+    SIDEBAR_SCROLLBAR_STATE.isDragging === false ||
+    SIDEBAR_SCROLLBAR_THUMB == null
+  ) {
+    return;
+  }
+
+  if (SIDEBAR_SCROLLBAR_STATE.dragPointerId === event.pointerId) {
+    try {
+      SIDEBAR_SCROLLBAR_THUMB.releasePointerCapture(event.pointerId);
+    } catch (error) {
+      /* noop - pointer capture is not critical for scroll syncing */
+    }
+  }
+
+  resetSidebarThumbDragState();
+}
+
+function handleSidebarThumbPointerCancel(event) {
+  if (SIDEBAR_SCROLLBAR_THUMB == null) {
+    return;
+  }
+
+  if (SIDEBAR_SCROLLBAR_STATE.dragPointerId === event.pointerId) {
+    try {
+      SIDEBAR_SCROLLBAR_THUMB.releasePointerCapture(event.pointerId);
+    } catch (error) {
+      /* noop - pointer capture is not critical for scroll syncing */
+    }
+  }
+
+  resetSidebarThumbDragState();
+}
+
+function handleSidebarTrackPointerDown(event) {
+  if (
+    SIDEBAR_SCROLLBAR == null ||
+    SIDEBAR_SCROLLBAR_THUMB == null ||
+    event.target === SIDEBAR_SCROLLBAR_THUMB
+  ) {
+    return;
+  }
+
+  const trackRect = SIDEBAR_SCROLLBAR.getBoundingClientRect();
+  const thumbHeight = parseFloat(
+    SIDEBAR_SCROLLBAR.dataset.thumbHeight || "0",
+  );
+  const maxThumbOffset = parseFloat(
+    SIDEBAR_SCROLLBAR.dataset.maxThumbOffset || "0",
+  );
+
+  if (maxThumbOffset <= 0) {
+    return;
+  }
+
+  const clickOffset = event.clientY - trackRect.top - thumbHeight / 2;
+  const targetOffset = clamp(0, clickOffset, maxThumbOffset);
+
+  setSidebarScrollTopFromThumbOffset(targetOffset);
+}
 function scrollContentTop() {
   if (!CONTENT) return;
   // Use smooth scrolling when switching sections
@@ -489,6 +689,8 @@ async function render(scrollToTop = false, isInitialRender = false) {
     }
   }
 
+  scheduleSidebarScrollbarUpdate();
+
   if (isMobile()) {
     closeHamburgerMenu();
   }
@@ -566,6 +768,54 @@ function scrollMainContentUp() {
   MAIN_CONTENT_SECTION?.scrollBy({
     top: -(MAIN_CONTENT_SECTION.clientHeight / 2),
   });
+}
+
+function initSidebarScrollbar() {
+  if (
+    SIDEBAR == null ||
+    SIDEBAR_SCROLLBAR == null ||
+    SIDEBAR_SCROLLBAR_THUMB == null
+  ) {
+    return;
+  }
+
+  SIDEBAR.addEventListener("scroll", scheduleSidebarScrollbarUpdate, {
+    passive: true,
+  });
+  window.addEventListener("resize", scheduleSidebarScrollbarUpdate, {
+    passive: true,
+  });
+
+  if ("ResizeObserver" in window) {
+    SIDEBAR_SCROLLBAR_STATE.resizeObserver = new ResizeObserver(() => {
+      scheduleSidebarScrollbarUpdate();
+    });
+    SIDEBAR_SCROLLBAR_STATE.resizeObserver.observe(SIDEBAR);
+  }
+
+  SIDEBAR_SCROLLBAR_THUMB.addEventListener(
+    "pointerdown",
+    handleSidebarThumbPointerDown,
+  );
+  SIDEBAR_SCROLLBAR_THUMB.addEventListener(
+    "pointermove",
+    handleSidebarThumbPointerMove,
+  );
+  SIDEBAR_SCROLLBAR_THUMB.addEventListener(
+    "pointerup",
+    handleSidebarThumbPointerUp,
+  );
+  SIDEBAR_SCROLLBAR_THUMB.addEventListener(
+    "pointercancel",
+    handleSidebarThumbPointerCancel,
+  );
+
+  SIDEBAR_SCROLLBAR.addEventListener(
+    "pointerdown",
+    handleSidebarTrackPointerDown,
+  );
+
+  scheduleSidebarScrollbarUpdate();
 }
 
 function initKeyboardListeners() {
@@ -653,6 +903,7 @@ async function init() {
   initMouseListeners();
   initTouchListeners();
   initTaskbarListeners();
+  initSidebarScrollbar();
 
   await render(true, true);
 
