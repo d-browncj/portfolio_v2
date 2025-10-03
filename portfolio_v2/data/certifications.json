@@ -1,148 +1,70 @@
 {
   "data": [
     {
-      "name": "AWS Solutions Architect Associate",
+      "name": "AWS Certified Solutions Architect – Associate",
       "issuer": "Amazon Web Services",
-      "date": "Valid until Dec 2025",
-      "title": "Cloud Architecture & Solutions Design",
+      "date": "Valid through Dec 2025",
+      "title": "Designing resilient AWS architectures",
       "content": [
-        "Demonstrated expertise in designing {{distributed systems}} on AWS platform with high availability and fault tolerance.",
-        "Proficient in {{AWS core services}} including EC2, S3, RDS, VPC, Lambda, CloudFormation, and IAM for secure and scalable cloud solutions."
+        "Validated ability to architect {{highly available}} and {{cost-optimised}} systems on AWS.",
+        "Experience with {{ECS}}, {{Lambda}}, {{RDS}}, and security guardrails across multi-account setups."
       ],
-      "certificateUrl": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
-      "pdfPath": "certificates/aws-solutions-architect.pdf"
+      "certificateUrl": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
     },
     {
       "name": "Google Cloud Professional Cloud Architect",
-      "issuer": "Google Cloud Platform",
-      "date": "Valid until Mar 2026",
-      "title": "Enterprise Cloud Solutions & Architecture",
+      "issuer": "Google Cloud",
+      "date": "Valid through May 2026",
+      "title": "Enterprise architecture on GCP",
       "content": [
-        "Expertise in designing, developing, and managing {{robust, secure, scalable}} cloud architecture solutions using Google Cloud technologies.",
-        "Advanced knowledge of {{GCP services}} including Compute Engine, Kubernetes Engine, Cloud SQL, BigQuery, and Cloud Functions."
+        "Design and govern solutions on {{GKE}}, {{Cloud Run}}, and managed data platforms.",
+        "Focus on balancing reliability, security, and sustainable operations for global workloads."
       ],
-      "certificateUrl": "https://cloud.google.com/certification/cloud-architect",
-      "pdfPath": "certificates/gcp-professional-architect.pdf"
+      "certificateUrl": "https://cloud.google.com/certification/cloud-architect"
     },
     {
-      "name": "Microsoft Azure Fundamentals",
-      "issuer": "Microsoft Azure",
-      "date": "Valid until Jan 2027",
-      "title": "Cloud Computing Fundamentals & Azure Services",
-      "content": [
-        "Foundational knowledge of {{cloud services}} and how those services are provided with Microsoft Azure.",
-        "Understanding of {{Azure core services}}, security, privacy, compliance, trust, and Azure pricing and support models."
-      ],
-      "certificateUrl": "https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/",
-      "pdfPath": "certificates/azure-fundamentals.pdf"
-    },
-    {
-      "name": "Kubernetes Administrator (CKA)",
+      "name": "Certified Kubernetes Administrator (CKA)",
       "issuer": "Cloud Native Computing Foundation",
-      "date": "Valid until Sep 2026",
-      "title": "Container Orchestration & Management",
+      "date": "Valid through Sep 2026",
+      "title": "Operating production Kubernetes clusters",
       "content": [
-        "Advanced skills in {{Kubernetes cluster}} administration, including installation, configuration, and troubleshooting.",
-        "Expertise in {{container orchestration}}, networking, storage, and security within Kubernetes environments."
+        "Hands-on administration of {{Kubernetes}} clusters, including networking, storage, and troubleshooting.",
+        "Emphasis on GitOps workflows, security controls, and observability for multi-team environments."
       ],
-      "certificateUrl": "https://www.cncf.io/certification/cka/",
-      "pdfPath": "certificates/kubernetes-cka.pdf"
+      "certificateUrl": "https://www.cncf.io/certification/cka/"
     },
     {
-      "name": "Docker Certified Associate",
-      "issuer": "Docker Inc.",
-      "date": "Valid until Nov 2025",
-      "title": "Container Platform & DevOps",
-      "content": [
-        "Proficiency in {{Docker containerization}} technology, including image creation, management, and deployment.",
-        "Knowledge of {{container orchestration}}, networking, and security best practices in Docker environments."
-      ],
-      "certificateUrl": "https://www.docker.com/certification",
-      "pdfPath": "certificates/docker-certified.pdf"
-    },
-    {
-      "name": "Terraform Associate",
+      "name": "HashiCorp Terraform Associate",
       "issuer": "HashiCorp",
-      "date": "Valid until Aug 2026",
-      "title": "Infrastructure as Code",
+      "date": "Valid through Aug 2026",
+      "title": "Infrastructure as Code foundations",
       "content": [
-        "Expertise in {{Infrastructure as Code}} using Terraform for provisioning and managing cloud resources.",
-        "Advanced knowledge of {{Terraform workflows}}, state management, and best practices for automation."
+        "Codify infrastructure with {{Terraform}} modules, workspaces, and state management patterns.",
+        "Embed policy-as-code and automated pipelines to keep environments compliant by default."
       ],
-      "certificateUrl": "https://www.hashicorp.com/certification/terraform-associate",
-      "pdfPath": "certificates/terraform-associate.pdf"
+      "certificateUrl": "https://www.hashicorp.com/certification/terraform-associate"
     },
     {
-      "name": "Certified Information Systems Security Professional",
-      "issuer": "(ISC)² CISSP",
-      "date": "Valid until Feb 2027",
-      "title": "Cybersecurity & Risk Management",
+      "name": "DevOps Institute SRE Foundation",
+      "issuer": "DevOps Institute",
+      "date": "Issued Jan 2024",
+      "title": "Site Reliability Engineering principles",
       "content": [
-        "Comprehensive knowledge of {{cybersecurity}} domains including security architecture, risk management, and incident response.",
-        "Expertise in {{security governance}}, compliance, and implementing security controls across enterprise environments."
+        "Grounding in {{SLOs}}, {{error budgets}}, and continuous improvement frameworks.",
+        "Applied reliability patterns to platform roadmaps and incident response playbooks."
       ],
-      "certificateUrl": "https://www.isc2.org/Certifications/CISSP",
-      "pdfPath": "certificates/cissp.pdf"
+      "certificateUrl": "https://www.devopsinstitute.com/certifications/sre-foundation/"
     },
     {
-      "name": "Certified Ethical Hacker (CEH)",
-      "issuer": "EC-Council",
-      "date": "Valid until Jun 2026",
-      "title": "Penetration Testing & Security Assessment",
-      "content": [
-        "Advanced skills in {{ethical hacking}} and penetration testing to identify security vulnerabilities.",
-        "Knowledge of {{security assessment}} methodologies, tools, and techniques for defensive security measures."
-      ],
-      "certificateUrl": "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
-      "pdfPath": "certificates/ceh.pdf"
-    },
-    {
-      "name": "CompTIA Security+",
-      "issuer": "CompTIA",
-      "date": "Valid until Apr 2027",
-      "title": "IT Security Fundamentals",
-      "content": [
-        "Foundational knowledge of {{IT security}} concepts, threats, vulnerabilities, and risk management.",
-        "Understanding of {{network security}}, compliance, operational security, and cryptography fundamentals."
-      ],
-      "certificateUrl": "https://www.comptia.org/certifications/security",
-      "pdfPath": "certificates/security-plus.pdf"
-    },
-    {
-      "name": "Certified Scrum Master (CSM)",
+      "name": "Scrum Alliance Certified ScrumMaster",
       "issuer": "Scrum Alliance",
-      "date": "Valid until Oct 2025",
-      "title": "Agile Project Management",
+      "date": "Valid through Oct 2025",
+      "title": "Facilitating agile delivery",
       "content": [
-        "Expertise in {{Scrum framework}} and agile methodologies for effective project management and team leadership.",
-        "Skills in {{facilitating sprints}}, removing impediments, and ensuring team productivity in agile environments."
+        "Supports teams with sprint facilitation, backlog refinement, and stakeholder communication.",
+        "Blends agile practices with platform engineering cadences for sustainable delivery."
       ],
-      "certificateUrl": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
-      "pdfPath": "certificates/scrum-master.pdf"
-    },
-    {
-      "name": "Project Management Professional (PMP)",
-      "issuer": "Project Management Institute",
-      "date": "Valid until Dec 2026",
-      "title": "Enterprise Project Management",
-      "content": [
-        "Advanced {{project management}} skills including planning, execution, monitoring, and closing of complex projects.",
-        "Expertise in {{PMI methodologies}}, risk management, stakeholder engagement, and resource optimization."
-      ],
-      "certificateUrl": "https://www.pmi.org/certifications/project-management-pmp",
-      "pdfPath": "certificates/pmp.pdf"
-    },
-    {
-      "name": "ITIL 4 Foundation",
-      "issuer": "AXELOS",
-      "date": "Valid until Jul 2026",
-      "title": "IT Service Management",
-      "content": [
-        "Knowledge of {{ITIL 4 framework}} for IT service management and digital transformation.",
-        "Understanding of {{service lifecycle}}, continual improvement, and value creation in IT organizations."
-      ],
-      "certificateUrl": "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation",
-      "pdfPath": "certificates/itil-foundation.pdf"
+      "certificateUrl": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
     }
   ]
 }

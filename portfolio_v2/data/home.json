@@ -2,32 +2,32 @@
   "data": [
     {
       "content": [
-  "Hi, I'm Sohaib Mokhliss \ud83d\udc68\u200d\ud83d\udcbb",
-  "A passionate software engineer with a focus on backend development, cloud architecture, and DevOps."
+        "Hi, I'm {{Sohaib}} Mokhliss 👨‍💻",
+        "I build dependable {{backend platforms}} and cloud-native systems that keep products fast, observable, and secure."
       ]
     },
     {
       "content": [
-        "I have extensive experience as a full-stack developer, working with modern technologies across web, cloud, and infrastructure.",
-        "I enjoy solving complex problems, building scalable systems, and continuously learning new skills."
+        "I currently lead platform engineering at {{ByteBakers}}, guiding teams through migrations from monoliths to event-driven services and mentoring engineers along the way.",
+        "My focus is pairing {{reliability}} with developer velocity through automation, infrastructure-as-code, and thoughtful architecture."
       ]
     },
     {
       "content": [
-        "My interests include cloud computing, distributed systems, automation, and mentoring others in technology.",
-        "I'm always open to new challenges and opportunities to collaborate."
+        "Tooling sweet spots: {{Go}}, {{TypeScript}}, {{PostgreSQL}}, Terraform, Kubernetes, and AWS.",
+        "I love designing feedback loops around {{observability}}, CI/CD, and security so shipping stays predictable."
       ]
     },
     {
       "content": [
-        "Connect with me on <a href=\"https://www.linkedin.com/in/browncj/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a>.",
-        "Check out my work on <a href=\"https://github.com/browncj/\" target=\"_blank\" class=\"text-pink\">GitHub</a>."
+        "Outside of work you’ll find me sharing notes on technical leadership, contributing to open source utilities, or iterating on personal SaaS ideas.",
+        "Let’s connect on <a href=\"https://www.linkedin.com/in/browncj/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a> or explore my repos on <a href=\"https://github.com/browncj/\" target=\"_blank\" class=\"text-pink\">GitHub</a>."
       ]
     },
     {
       "content": [
-        "Use the menu to explore my work, experience, and skills.",
-        "Navigate using the arrow keys or Vim motions."
+        "Use the menu or keyboard shortcuts to jump into projects, experience, skills, and certifications.",
+        "The interface mirrors a favorite TUI workflow—feel free to roam."
       ]
     }
   ]
