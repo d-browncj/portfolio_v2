@@ -494,6 +494,45 @@ svg {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.taskbar-divider {
+  width: 1px;
+  height: 30px;
+  background: var(--clr-border-subtle);
+  margin: 0 0.5rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--clr-border-inactive);
+  color: var(--clr-accent-tertiary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Fira Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  border-color: var(--clr-border-hover);
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--clr-accent-secondary);
+}
+
+.lang-btn.active {
+  background: var(--clr-blue);
+  border-color: var(--clr-blue);
+  color: var(--clr-primary-bg);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
 .window-content {
   height: calc(100% - 42px);
   overflow-y: auto;
@@ -1015,23 +1054,64 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
     background: var(--clr-primary-bg);
   }
 
-  .window-header { display: none; }
-  .window-content { padding: 1rem; height: auto; }
-
   .os-taskbar {
-    position: static;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    width: auto;
+    max-width: 90vw;
     height: auto;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem;
-    background: var(--clr-tertiary-bg);
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(180deg, rgba(28, 33, 40, 0.98) 0%, rgba(22, 27, 34, 0.95) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--clr-border-subtle);
+    border-radius: 16px 16px 0 0;
+    z-index: 99;
+    gap: 0.25rem;
   }
 
   .os-taskbar-item {
-    flex: 1;
-    min-width: 80px;
+    flex: 0 0 auto;
+    min-width: 60px;
+    padding: 0.5rem 0.5rem;
     justify-content: center;
     text-align: center;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .os-taskbar-item span {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .taskbar-divider {
+    flex-basis: 100%;
+    width: 100%;
+    height: 1px;
+    background: var(--clr-border-subtle);
+    margin: 0.5rem 0;
+  }
+
+  .language-switcher {
+    margin: 0;
+  }
+
+  .lang-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .window-content {
+    padding: 1rem;
+    height: auto;
+    margin-bottom: 120px;
   }
 
   #footer {
@@ -1051,9 +1131,21 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   body {
     height: 100%;
     padding: 2vw;
-    margin-top: 100px;
+    margin-top: 0;
     overflow-y: scroll !important;
     overflow-x: hidden;
+  }
+
+  #terminal-profile-pic-container {
+    float: none;
+    margin: 1rem auto;
+    max-width: 200px;
+    display: block;
+  }
+
+  #terminal-profile-pic {
+    width: 100%;
+    max-width: 200px;
   }
 
   #experience .ui-list div {
@@ -1093,11 +1185,35 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   }
 
   #main-content {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .outer-paragraph-container {
-    padding: 0 5%;
+    padding: 0 1rem;
+  }
+
+  .inner-paragraph-container {
+    margin-bottom: 2rem;
+  }
+
+  .inner-paragraph-container p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .inner-paragraph-container > div {
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
   }
 
   #mobile-help {
@@ -1119,13 +1235,26 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   }
 
   .ui-list {
-    font-size: 1.2rem;
-    gap: 0;
+    font-size: 1rem;
+    gap: 0.25rem;
     width: auto;
   }
 
   .ui-list div {
-    padding: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .technologies-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  pre {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    overflow-x: auto;
   }
 
   #experience .ui-list div {
@@ -1154,18 +1283,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 
   /* NAVBAR */
   .nav-container {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 5vw;
-    width: 100vw;
-    height: 110px;
-    background-color: var(--clr-primary-bg);
-    opacity: 0.9;
-    z-index: 98;
+    display: none;
   }
 
   #logo-container {

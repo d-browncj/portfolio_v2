@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "name": "Ingénieur Principal de Plateforme",
+      "company": "ByteBakers",
+      "date": "Avr 2022 — Présent",
+      "title": "Ingénierie de Plateforme & Leadership Technique",
+      "content": [
+        "Dirige une équipe plateforme livrant des services multi-régions en {{Go}} et {{TypeScript}} supportant plus de 12 produits clients.",
+        "Architecturé une approche événementielle basée sur {{Kafka}} et {{PostgreSQL}}, réduisant la latence de 70% et simplifiant les contrats de données.",
+        "Optimisé le CI/CD avec {{Terraform}} et {{GitHub Actions}}, réduisant les temps de déploiement d'heures à moins de 10 minutes."
+      ],
+      "technologies": ["Go", "TypeScript", "Kafka", "PostgreSQL", "Terraform", "Kubernetes", "AWS"]
+    },
+    {
+      "name": "Ingénieur Backend Senior",
+      "company": "Shippr",
+      "date": "Jan 2020 — Avr 2022",
+      "title": "Ingénierie de Plateforme Logistique",
+      "content": [
+        "Modernisé un monolithe Node.js en une suite de services {{Go}} et {{Node.js}} avec authentification partagée, observabilité et outils de déploiement.",
+        "Introduit des passerelles {{GraphQL}} et {{REST}} unifiant trois applications clientes et outils internes sans interruption.",
+        "Collaboré avec les équipes produit et ops pour livrer des algorithmes de routage réduisant les temps de livraison de 18%."
+      ],
+      "technologies": ["Go", "Node.js", "GraphQL", "PostgreSQL", "Redis", "AWS", "Datadog"]
+    },
+    {
+      "name": "Ingénieur Logiciel Principal",
+      "company": "Atlas Commerce",
+      "date": "Mar 2018 — Déc 2019",
+      "title": "Technologie Retail & Ops Plateforme",
+      "content": [
+        "Dirigé une équipe cross-fonctionnelle pour livrer une plateforme {{e-commerce}} unifiée avec vitrines et flux de paiement configurables.",
+        "Implémenté l'{{infrastructure-as-code}} avec Terraform et automatisé les releases, permettant des lancements hebdomadaires sur cinq marques.",
+        "Encadré des ingénieurs sur les revues d'architecture, stratégie de test et conception axée sur l'observabilité."
+      ],
+      "technologies": ["TypeScript", "React", "Go", "Terraform", "AWS", "CircleCI"]
+    },
+    {
+      "name": "Ingénieur Full-Stack",
+      "company": "KBS Marketing",
+      "date": "Nov 2016 — Fév 2018",
+      "title": "Shopify & Intégrations Personnalisées",
+      "content": [
+        "Développé et maintenu des applications {{Shopify}} et extensions de thèmes pour la facturation d'abonnements et workflows de merchandising.",
+        "Introduit des bibliothèques de composants réutilisables en {{React}} et tokens de design pour cohérence des campagnes marketing.",
+        "Automatisé les pipelines de déploiement de contenu, réduisant le temps de publication de jours à heures pour les éditeurs non-techniques."
+      ],
+      "technologies": ["TypeScript", "React", "Shopify", "Liquid", "Node.js", "PostgreSQL"]
+    },
+    {
+      "name": "Ingénieur Logiciel",
+      "company": "Roggemans Development",
+      "date": "Oct 2014 — Oct 2016",
+      "title": "Full-Stack .NET & JavaScript",
+      "content": [
+        "Livré des applications {{.NET}} et {{JavaScript}} sur mesure pour détaillants régionaux avec intégrations aux systèmes ERP legacy.",
+        "Implémenté l'optimisation des performances et stratégies de cache réduisant les temps de chargement de 40% pour campagnes à fort trafic.",
+        "Introduit des pratiques de tests automatisés, augmentant la cadence et la confiance des releases pour l'équipe de développement."
+      ],
+      "technologies": ["C#", ".NET", "JavaScript", "SQL Server", "Azure", "Selenium"]
+    },
+    {
+      "name": "Stagiaire en Ingénierie Logicielle",
+      "company": "Proximus",
+      "date": "Juil 2013 — Sep 2014",
+      "title": "Outils de Support & Automatisation",
+      "content": [
+        "Développé des outils internes automatisant les diagnostics pour le support client, réduisant le temps moyen de traitement des appels de 25%.",
+        "Collaboré avec des ingénieurs seniors pour documenter les runbooks de service et workflows d'incidents utilisés au sein des opérations.",
+        "Acquis une exposition précoce à l'administration système {{Linux}}, scripting et fondamentaux réseau."
+      ],
+      "technologies": ["Python", "Bash", "Linux", "MySQL", "Cisco Networking"]
+    }
+  ]
+}

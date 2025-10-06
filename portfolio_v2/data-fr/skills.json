@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "name": "Go",
+      "content": [
+        "Mon langage de prédilection pour construire des {{services backend}} et automatisations nécessitant des performances prévisibles.",
+        "Exploite les {{goroutines}} et {{channels}} pour orchestrer pipelines événementiels et workers de longue durée.",
+        "Prêt pour la livraison avec outils tels que {{modules Go}}, linting et logging structuré intégrés au workflow."
+      ],
+      "snippet": "go"
+    },
+    {
+      "name": "TypeScript",
+      "content": [
+        "Utilisé dans APIs, CLIs et bases de code UI pour la combinaison de {{typage statique}} et itération rapide.",
+        "Partage les {{contrats}} entre services et frontends pour réduire surprises runtime et améliorer confiance développeur.",
+        "Associé à {{ESBuild}}, {{Vitest}} et bundlers modernes pour boucles de feedback mesurées en secondes."
+      ],
+      "snippet": "ts"
+    },
+    {
+      "name": "Node.js",
+      "content": [
+        "Idéal pour construire outils développeur, orchestrateurs et surfaces d'intégration reliant les plateformes.",
+        "À l'aise en mélangeant {{Express}}, {{Fastify}} ou couches HTTP sur mesure quand budgets latence sont serrés.",
+        "Combiné avec {{Prisma}} ou {{TypeORM}} plus harnais de test robustes pour services résilients."
+      ],
+      "snippet": "mjs"
+    },
+    {
+      "name": "React",
+      "content": [
+        "Framework de choix pour créer tableaux de bord riches en données et outils internes avec ergonomie forte.",
+        "S'appuie sur {{hooks}}, {{React Query}} et design systems pour garder expériences cohésives entre produits.",
+        "Livré avec {{TypeScript}} et documentation pilotée Storybook pour garder équipes alignées."
+      ],
+      "snippet": "tsx"
+    },
+    {
+      "name": "GraphQL",
+      "content": [
+        "Conception et exploitation de schémas {{GraphQL}} devant microservices, APIs legacy et agrégats de domaine.",
+        "Introduction de patterns de fédération, registres de schémas et requêtes persistées pour garder clients performants.",
+        "Construction d'outils pour diffing de schémas, gestion de changements et vérifications automatisées en CI/CD."
+      ],
+      "snippet": "graphql"
+    },
+    {
+      "name": "PostgreSQL",
+      "content": [
+        "Base de données relationnelle par défaut pour charges transactionnelles et sidecars analytiques.",
+        "À l'aise avec {{PL/pgSQL}}, stratégies d'indexation et partitionnement pour datasets haut volume.",
+        "Associé à {{TimescaleDB}}, {{pgBouncer}} et plans EXPLAIN finement ajustés pour garder latence basse."
+      ],
+      "snippet": "sql"
+    },
+    {
+      "name": "AWS",
+      "content": [
+        "Architecture de charges sur services {{AWS}} incluant ECS, Lambda, Step Functions et bases de données managées.",
+        "Conception de garde-fous avec {{IAM}}, {{CloudWatch}} et {{Security Hub}} pour garder environnements sûrs par défaut.",
+        "Opérations conscientes des coûts via {{Savings Plans}}, dimensionnement optimal et optimisation pilotée télémétrie."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Terraform & IaC",
+      "content": [
+        "Codification infrastructure avec modules {{Terraform}} réutilisables et blueprints adoptés entre équipes.",
+        "Implémentation de {{policy-as-code}} via Sentinel et Open Policy Agent pour appliquer meilleures pratiques.",
+        "Automatisation planification, détection de drift et applies via pipelines de livraison continue."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Kubernetes & Containers",
+      "content": [
+        "Exploitation de clusters {{Kubernetes}} production sur EKS, GKE et nœuds auto-gérés avec workflows GitOps.",
+        "Ajustement manifestes, charts {{Helm}} et politiques ressources pour scaling prévisible et efficacité.",
+        "Instrumentation déploiements avec {{Prometheus}}, {{Loki}} et {{Grafana}} pour visibilité end-to-end."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Observabilité & Fiabilité",
+      "content": [
+        "Construction stacks observabilité utilisant {{OpenTelemetry}}, {{Grafana}} et {{ClickHouse}} pour centraliser signaux.",
+        "Définition SLOs, rituels réponse incidents et boucles feedback autonomisant équipes plateforme.",
+        "Introduction {{expériences chaos}} et postmortems structurés pour élever continuellement fiabilité."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Tests & Qualité",
+      "content": [
+        "Approche stratégique des tests : couverture {{unitaire}}, {{contrat}} et {{charge}} alignée avec risque.",
+        "Intégration pipelines rapides avec {{Vitest}}, {{Jest}} et {{go test}} pour donner confiance aux ingénieurs.",
+        "Utilisation monitoring synthétique et suites smoke pour valider déploiements post-lancement."
+      ],
+      "snippet": "test"
+    },
+    {
+      "name": "Expérience Développeur",
+      "content": [
+        "Création CLIs, templates et {{documentation}} éliminant friction pour équipes produit.",
+        "Champion améliorations inner-loop avec hot reload, stacks locales et environnements dev distants.",
+        "Mentorat équipes sur {{revues code}}, pairing et rythmes partage connaissances."
+      ],
+      "snippet": "sh"
+    }
+  ]
+}

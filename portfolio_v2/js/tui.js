@@ -414,15 +414,44 @@ function clearMainContent() {
 }
 
 async function displayContent() {
+  // Save profile pic if it exists
+  const existingProfilePic = document.getElementById('terminal-profile-pic-container');
+  const savedProfilePic = existingProfilePic ? existingProfilePic.cloneNode(true) : null;
+
   clearMainContent();
 
   const sectionName = left_sections[currentPosition.sectionIndex].name;
 
-  const response = await fetch(`data/${sectionName}.json`);
+  const dataPath = typeof LanguageManager !== 'undefined'
+    ? LanguageManager.getDataPath(sectionName)
+    : `data/${sectionName}.json`;
+  const response = await fetch(dataPath);
   const { data } = await response.json();
 
   const outerContainerElement = document.createElement("div");
   outerContainerElement.classList.add("outer-paragraph-container");
+
+  // Always restore profile pic for home section - create if it doesn't exist
+  if (sectionName === "home") {
+    let profilePicToUse = savedProfilePic;
+
+    // If no saved profile pic exists, create one from scratch
+    if (!profilePicToUse) {
+      const profilePicContainer = document.createElement("div");
+      profilePicContainer.id = "terminal-profile-pic-container";
+
+      const profilePicImg = document.createElement("img");
+      profilePicImg.src = "images/profilePic.jpg";
+      profilePicImg.alt = "Sohaib Mokhliss";
+      profilePicImg.id = "terminal-profile-pic";
+
+      profilePicContainer.appendChild(profilePicImg);
+      profilePicToUse = profilePicContainer;
+    }
+
+    outerContainerElement.appendChild(profilePicToUse);
+  }
+
   const innerContainerElement = document.createElement("div");
   innerContainerElement.classList.add("inner-paragraph-container");
 
@@ -548,25 +577,11 @@ async function displayContent() {
     innerContainerElement.prepend(topElement);
     outerContainerElement.appendChild(innerContainerElement);
 
-    clearMainContent();
     MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
 
     colorizeCode();
   } else {
-    const logoFileName = `images/logo${Math.floor(Math.random() * 4) + 1}.svg`;
-    const logoContainer = document.createElement("div");
-    logoContainer.id = "logo-container";
-
-    const logoElement = document.createElement("img");
-    logoElement.loading = "eager";
-    logoElement.src = logoFileName;
-    logoElement.id = "logo";
-    logoElement.alt = "Wallenart";
-
-    logoContainer.appendChild(logoElement);
-
-    clearMainContent();
-    MAIN_CONTENT_SECTION.appendChild(logoContainer);
+    // Home section - no logo needed, profile pic is already added
 
     data.forEach((d) => {
       const element = document.createElement("div");

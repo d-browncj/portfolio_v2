@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services",
+      "date": "Valide jusqu'en Déc 2025",
+      "title": "Conception d'architectures AWS résilientes",
+      "content": [
+        "Capacité validée à architecturer des systèmes {{hautement disponibles}} et {{optimisés en coûts}} sur AWS.",
+        "Expérience avec {{ECS}}, {{Lambda}}, {{RDS}} et garde-fous sécurité sur configurations multi-comptes."
+      ],
+      "certificateUrl": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    },
+    {
+      "name": "Google Cloud Professional Cloud Architect",
+      "issuer": "Google Cloud",
+      "date": "Valide jusqu'en Mai 2026",
+      "title": "Architecture d'entreprise sur GCP",
+      "content": [
+        "Conception et gouvernance de solutions sur {{GKE}}, {{Cloud Run}} et plateformes de données managées.",
+        "Focus sur l'équilibre entre fiabilité, sécurité et opérations durables pour charges globales."
+      ],
+      "certificateUrl": "https://cloud.google.com/certification/cloud-architect"
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Cloud Native Computing Foundation",
+      "date": "Valide jusqu'en Sep 2026",
+      "title": "Exploitation de clusters Kubernetes en production",
+      "content": [
+        "Administration pratique de clusters {{Kubernetes}}, incluant réseau, stockage et dépannage.",
+        "Accent sur workflows GitOps, contrôles sécurité et observabilité pour environnements multi-équipes."
+      ],
+      "certificateUrl": "https://www.cncf.io/certification/cka/"
+    },
+    {
+      "name": "HashiCorp Terraform Associate",
+      "issuer": "HashiCorp",
+      "date": "Valide jusqu'en Août 2026",
+      "title": "Fondations Infrastructure as Code",
+      "content": [
+        "Codification infrastructure avec modules {{Terraform}}, workspaces et patterns de gestion d'état.",
+        "Intégration policy-as-code et pipelines automatisés pour garder environnements conformes par défaut."
+      ],
+      "certificateUrl": "https://www.hashicorp.com/certification/terraform-associate"
+    },
+    {
+      "name": "DevOps Institute SRE Foundation",
+      "issuer": "DevOps Institute",
+      "date": "Émis Jan 2024",
+      "title": "Principes de Site Reliability Engineering",
+      "content": [
+        "Fondations en {{SLOs}}, {{budgets d'erreur}} et frameworks d'amélioration continue.",
+        "Application de patterns de fiabilité aux roadmaps plateforme et playbooks de réponse incidents."
+      ],
+      "certificateUrl": "https://www.devopsinstitute.com/certifications/sre-foundation/"
+    },
+    {
+      "name": "Scrum Alliance Certified ScrumMaster",
+      "issuer": "Scrum Alliance",
+      "date": "Valide jusqu'en Oct 2025",
+      "title": "Facilitation de livraison agile",
+      "content": [
+        "Soutien équipes avec facilitation sprint, affinement backlog et communication parties prenantes.",
+        "Mélange pratiques agiles avec cadences ingénierie plateforme pour livraison durable."
+      ],
+      "certificateUrl": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+    }
+  ]
+}
