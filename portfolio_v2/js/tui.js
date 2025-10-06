@@ -302,10 +302,56 @@ function initTaskbarListeners() {
       toggleSidebar();
     });
   }
+
+  // Handle theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
 }
 
 function isMobile() {
   return window.innerWidth <= 768;
+}
+
+// Theme management
+const ThemeManager = {
+  currentTheme: 'dark',
+
+  init() {
+    // Get saved theme from localStorage or default to 'dark'
+    this.currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    this.applyTheme(this.currentTheme);
+  },
+
+  applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.body.className = theme === 'dark' ? 'darkmode' : 'lightmode';
+    this.currentTheme = theme;
+  },
+
+  toggleTheme() {
+    const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+    this.setTheme(newTheme);
+  },
+
+  setTheme(theme) {
+    this.currentTheme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    this.applyTheme(theme);
+
+    // Update meta theme-color for mobile browsers
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    const metaNavColor = document.querySelector('meta[name="msapplication-navbutton-color"]');
+    const newColor = theme === 'dark' ? '#0d1117' : '#f8fafc';
+
+    if (metaThemeColor) metaThemeColor.content = newColor;
+    if (metaNavColor) metaNavColor.content = newColor;
+  }
+};
+
+function toggleTheme() {
+  ThemeManager.toggleTheme();
 }
 
 
@@ -914,6 +960,9 @@ function initTouchListeners() {
 }
 
 async function init() {
+  // Initialize theme before anything else
+  ThemeManager.init();
+
   initKeyboardListeners();
   initMouseListeners();
   initTouchListeners();
