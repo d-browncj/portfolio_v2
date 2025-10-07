@@ -968,6 +968,7 @@ async function init() {
   initTouchListeners();
   initTaskbarListeners();
   initSidebarScrollbar();
+  initImageModal();
 
   await render(true, true);
 
@@ -1247,3 +1248,44 @@ const arduinoKeywords = [
   ],
   [...cKeywords[1], "long", "int", "switch", "case", "break"],
 ];
+
+// Image Modal Functionality
+function initImageModal() {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-image");
+  const closeBtn = document.querySelector(".image-modal-close");
+  const profilePic = document.getElementById("terminal-profile-pic");
+
+  if (!modal || !modalImg || !closeBtn || !profilePic) {
+    return;
+  }
+
+  // Open modal when profile pic is clicked
+  profilePic.addEventListener("click", function() {
+    modal.classList.add("active");
+    modalImg.src = this.src;
+    document.body.style.overflow = "hidden"; // Prevent background scroll
+  });
+
+  // Close modal when X is clicked
+  closeBtn.addEventListener("click", function() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && modal.classList.contains("active")) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+}
