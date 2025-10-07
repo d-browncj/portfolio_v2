@@ -2,3 +2,6 @@
 *.min.js
 *.min.css
 *.otter.*
+node_modules/
+dist/
+.cache/
