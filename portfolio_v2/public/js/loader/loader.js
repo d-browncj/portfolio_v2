@@ -1,1 +1,30 @@
-const IS_DEV="localhost"===window.location.hostname||"127.0.0.1"===window.location.hostname,CSS_PATH=IS_DEV?"css/tui.css":"css/tui.min.css",JS_PATH=IS_DEV?"js/tui.js":"js/tui.min.js";function loadDependency(e,t,n){let s=document.head,c=document.getElementById("min-style"),i="script"===t?document.createElement("script"):document.createElement("link");"script"===t?(i.type="text/javascript",i.src=e):(i.rel="stylesheet",i.href=e),"script"===t&&null!=n&&(i.onreadystatechange=n,i.onload=n),s.appendChild(i),c?.remove()}loadDependency(CSS_PATH,"link"),loadDependency(JS_PATH,"script",function(){init()});
+// Simple loader that loads tui.js regardless of environment
+const CSS_PATH = 'css/tui.css';
+const JS_PATH = 'js/tui.js';
+
+function loadDependency(src, type, callback) {
+  const head = document.head;
+  const minStyle = document.getElementById('min-style');
+  const element = type === 'script' ? document.createElement('script') : document.createElement('link');
+
+  if (type === 'script') {
+    element.type = 'text/javascript';
+    element.src = src;
+  } else {
+    element.rel = 'stylesheet';
+    element.href = src;
+  }
+
+  if (type === 'script' && callback != null) {
+    element.onreadystatechange = callback;
+    element.onload = callback;
+  }
+
+  head.appendChild(element);
+  minStyle?.remove();
+}
+
+loadDependency(CSS_PATH, 'link');
+loadDependency(JS_PATH, 'script', function() {
+  init();
+});
