@@ -1,1 +1,1 @@
-export default { base: '/portfolio_v2/' }
+export default { base: '/' }
