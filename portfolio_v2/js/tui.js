@@ -748,6 +748,9 @@ async function render(scrollToTop = false, isInitialRender = false) {
       // Update taskbar active state
       updateTaskbarActive(left_sections[currentPosition.sectionIndex].name);
     }
+  } else {
+    // On initial render, also display content to respect language settings
+    displayContent();
   }
 
   scheduleSidebarScrollbarUpdate();

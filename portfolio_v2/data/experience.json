@@ -1,76 +1,40 @@
 {
   "data": [
     {
-      "name": "Principal Platform Engineer",
-      "company": "ByteBakers",
-      "date": "Apr 2022 — Present",
-      "title": "Platform Engineering & Technical Leadership",
+      "name": "Cybersecurity Analyst (Intern)",
+      "company": "HPS",
+      "date": "June–July 2023 (2 months)",
+      "title": "Cybersecurity Analyst",
       "content": [
-        "Lead a platform squad delivering multi-region {{Go}} and {{TypeScript}} services that support 12+ customer-facing products.",
-        "Shaped an event-driven architecture backed by {{Kafka}} and {{PostgreSQL}}, reducing data latency by 70% and simplifying data contracts.",
-        "Scaled CI/CD with {{Terraform}} and {{GitHub Actions}}, cutting deployment times from hours to under 10 minutes while improving release confidence."
+        "Worked with the wider security team on network monitoring and vulnerability assessment.",
+        "Monitored network traffic and identified security vulnerabilities.",
+        "Implemented security measures to protect critical systems and infrastructure."
       ],
-      "technologies": ["Go", "TypeScript", "Kafka", "PostgreSQL", "Terraform", "Kubernetes", "AWS"]
+      "technologies": ["Network Security", "Vulnerability Assessment", "Security Monitoring", "Incident Response"]
     },
     {
-      "name": "Senior Backend Engineer",
-      "company": "Shippr",
-      "date": "Jan 2020 — Apr 2022",
-      "title": "Logistics Platform Engineering",
+      "name": "Penetration Tester (Intern)",
+      "company": "CIH",
+      "date": "2024 (1 month)",
+      "title": "Penetration Tester",
       "content": [
-        "Modernised a Node.js monolith into a suite of {{Go}} and {{Node.js}} services with shared authentication, observability, and deployment tooling.",
-        "Introduced {{GraphQL}} and {{REST}} gateways that unified three customer apps and internal tooling without downtime.",
-        "Partnered with product and ops teams to ship routing algorithms that shaved 18% off delivery times across the network."
+        "Collaborated with the development team on security testing initiatives.",
+        "Participated in intrusion testing and vulnerability assessments.",
+        "Gained exposure to web design/content and SEO/branding tasks."
       ],
-      "technologies": ["Go", "Node.js", "GraphQL", "PostgreSQL", "Redis", "AWS", "Datadog"]
+      "technologies": ["Penetration Testing", "Web Application Security", "Security Testing", "Vulnerability Assessment"]
     },
     {
-      "name": "Lead Software Engineer",
-      "company": "Atlas Commerce",
-      "date": "Mar 2018 — Dec 2019",
-      "title": "Retail Technology & Platform Ops",
+      "name": "DevOps/Security Intern",
+      "company": "ITPay",
+      "date": "August–September 2025 (2 months)",
+      "title": "DevOps & Security Intern",
       "content": [
-        "Led a cross-functional squad to deliver a unified {{e-commerce}} platform with configurable storefronts and payment flows.",
-        "Implemented {{infrastructure-as-code}} with Terraform and automated releases, enabling weekly feature launches across five brands.",
-        "Mentored engineers on architecture reviews, test strategy, and observability-first design."
+        "Contributed to payment systems security and infrastructure.",
+        "Worked on automation and system administration tasks.",
+        "Gained hands-on experience with modern DevOps practices."
       ],
-      "technologies": ["TypeScript", "React", "Go", "Terraform", "AWS", "CircleCI"]
-    },
-    {
-      "name": "Full-Stack Engineer",
-      "company": "KBS Marketing",
-      "date": "Nov 2016 — Feb 2018",
-      "title": "Shopify & Custom Integrations",
-      "content": [
-        "Built and maintained {{Shopify}} applications and theme extensions that powered subscription billing and merchandising workflows.",
-        "Introduced reusable component libraries in {{React}} and design tokens that kept marketing campaigns consistent across properties.",
-        "Automated content deployment pipelines, reducing time-to-publish from days to hours for non-technical editors."
-      ],
-      "technologies": ["TypeScript", "React", "Shopify", "Liquid", "Node.js", "PostgreSQL"]
-    },
-    {
-      "name": "Software Engineer",
-      "company": "Roggemans Development",
-      "date": "Oct 2014 — Oct 2016",
-      "title": "Full-Stack .NET & JavaScript",
-      "content": [
-        "Delivered bespoke {{.NET}} and {{JavaScript}} applications for regional retailers with integrations to legacy ERP systems.",
-        "Implemented performance tuning and caching strategies that reduced page load times by 40% for high-traffic campaigns.",
-        "Introduced automated testing practices, increasing release cadence and confidence for the development team."
-      ],
-      "technologies": ["C#", ".NET", "JavaScript", "SQL Server", "Azure", "Selenium"]
-    },
-    {
-      "name": "Software Engineering Intern",
-      "company": "Proximus",
-      "date": "Jul 2013 — Sep 2014",
-      "title": "Support Tooling & Automation",
-      "content": [
-        "Developed internal tooling that automated diagnostics for customer support, cutting average call handling time by 25%.",
-        "Collaborated with senior engineers to document service runbooks and incident workflows used across the operations floor.",
-        "Earned early exposure to {{Linux}} systems administration, scripting, and networking fundamentals."
-      ],
-      "technologies": ["Python", "Bash", "Linux", "MySQL", "Cisco Networking"]
+      "technologies": ["DevOps", "Security", "Automation", "System Administration"]
     }
   ]
 }

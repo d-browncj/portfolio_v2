@@ -10,7 +10,7 @@ const LanguageManager = {
       skills: 'Skills - Tools',
       certifications: 'Certifications',
       windowTitle: 'Sohaib Mokhliss - Portfolio Terminal',
-      homeIntro: "Hello! I'm <span class=\"text-blue\">Sohaib Mokhliss</span>, a passionate software engineer focused on backend, cloud, and DevOps."
+      homeIntro: "Hi! I'm <span class=\"text-blue\">Sohaib Mokhliss</span>, a security-minded engineer building <span class=\"text-orange\">DevOps automation</span> and <span class=\"text-pink\">resilient infrastructures</span>."
     },
     fr: {
       home: 'Accueil',
@@ -19,7 +19,7 @@ const LanguageManager = {
       skills: 'Compétences - Outils',
       certifications: 'Certifications',
       windowTitle: 'Sohaib Mokhliss - Portfolio Terminal',
-      homeIntro: "Salut! Je suis <span class=\"text-blue\">Sohaib Mokhliss</span>, un ingénieur logiciel passionné axé sur le backend, le cloud et DevOps."
+      homeIntro: "Salut ! Je suis <span class=\"text-blue\">Sohaib Mokhliss</span>, un ingenieur oriente securite qui cree des <span class=\"text-orange\">automatismes DevOps</span> et des <span class=\"text-pink\">infrastructures resilientes</span>."
     }
   },
 
@@ -27,6 +27,7 @@ const LanguageManager = {
     // Get saved language from localStorage or default to 'en'
     this.currentLang = localStorage.getItem('portfolio-language') || 'en';
     this.updateUI();
+    this.updateStaticText();
     this.attachEventListeners();
   },
 

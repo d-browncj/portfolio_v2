@@ -1,103 +1,16 @@
 {
   "data": [
     {
-      "name": "FindLeads",
-      "images": ["../images/findleads1.webp", "../images/findleads2.webp"],
+      "name": "Your Project Name",
       "year": 2024,
-      "demoUrl": "https://findleads.app",
+      "githubUrl": "https://github.com/yourusername/yourproject",
+      "demoUrl": "https://yourproject.com",
       "content": [
-        "Bootstrapped a {{B2B prospecting platform}} tailored for boutique agencies, blending fresh data streams with opinionated workflows.",
-        "Crafted an event-sourced ingestion engine in {{Go}} with {{PostgreSQL}} search indexes, enabling sub-second filters across millions of leads.",
-        "Integrated billing and onboarding automations so new teams activate within minutes without manual intervention."
+        "Describe your project here.",
+        "Add key features and technologies used.",
+        "Explain the impact or results achieved."
       ],
-      "technologies": ["Go", "PostgreSQL", "HTMX", "Supabase", "Redis", "TailwindCSS"]
-    },
-    {
-      "name": "CloudPulse",
-      "year": 2023,
-      "githubUrl": "https://github.com/browncj/cloudpulse",
-      "content": [
-        "Internal observability stack that unified {{metrics}}, {{logs}}, and {{traces}} for platform teams across microservices.",
-        "Streams telemetry through {{Kafka}} into {{ClickHouse}} with curated Grafana dashboards and SLO automation.",
-        "Reduced incident time-to-detect by 60% and empowered engineers with actionable runbooks fed by real-time signals."
-      ],
-      "technologies": ["Go", "Kafka", "ClickHouse", "Grafana", "OpenTelemetry", "Terraform"]
-    },
-    {
-      "name": "InfraWeaver",
-      "year": 2023,
-      "githubUrl": "https://github.com/browncj/infraweaver",
-      "content": [
-        "A {{Terraform}} module library and scaffolding CLI that codifies best practices for AWS workloads across teams.",
-        "Encodes guardrails for {{networking}}, {{identity}}, and {{observability}} while staying composable for product squads.",
-        "Adopted by four teams to standardize infrastructure, trimming environment setup from weeks to days."
-      ],
-      "technologies": ["Terraform", "Go", "AWS", "GitHub Actions"]
-    },
-    {
-      "name": "DeployMate",
-      "year": 2022,
-      "githubUrl": "https://github.com/browncj/deploymate",
-      "content": [
-        "Opinionated deployment orchestrator that wraps {{GitHub Actions}} and {{ArgoCD}} with a friendly CLI and dashboards.",
-        "Supports preview environments, canary strategy, and automated incident rollback across Kubernetes clusters.",
-        "Adopted in production to handle 250+ deploys per week with full auditability and chat-ops integrations."
-      ],
-      "technologies": ["TypeScript", "Go", "Kubernetes", "ArgoCD", "GitHub Actions", "PostgreSQL"]
-    },
-    {
-      "name": "ShopiCSV",
-      "images": [
-        "../images/shopicsv1.webp",
-        "../images/shopicsv2.webp",
-        "../images/shopicsv3.webp"
-      ],
-      "year": 2022,
-      "githubUrl": "https://www.github.com/zyriab/ShopiCSV",
-      "content": [
-        "SaaS that synchronises {{Shopify}} catalogues with ERP exports by reconciling data from CSV, APIs, and webhooks.",
-        "Provides bulk transformations, validation rules, and live previews to keep merchandising and ops in sync.",
-        "Scaled to hundreds of stores with multi-tenant isolation, per-store throttling, and automated change alerts."
-      ],
-      "technologies": ["TypeScript", "React", "Node.js", "AWS", "Auth0", "PostgreSQL"]
-    },
-    {
-      "name": "Nouvell",
-      "images": ["../images/nouvell.webp"],
-      "year": 2021,
-      "githubUrl": "https://www.github.com/zyriab/nouvell",
-      "content": [
-        "Serverless {{newsletter platform}} that turns product updates into personalised email journeys.",
-        "Runs on {{AWS Lambda}} with a {{GraphQL}} API, persistent queues, and per-subscriber analytics dashboards.",
-        "Used by early-stage founders to automate changelog updates and retain early adopters."
-      ],
-      "technologies": ["Node.js", "TypeScript", "GraphQL", "AWS Lambda", "MongoDB", "Jest"]
-    },
-    {
-      "name": "Polaris File Explorer",
-      "images": ["../images/pfx1.webp", "../images/pfx2.webp"],
-      "year": 2021,
-      "demoUrl": "https://demo.shopicsv.app/",
-      "githubUrl": "https://www.github.com/zyriab/polaris-file-explorer",
-      "content": [
-        "Front-end toolkit for managing {{Shopify Polaris}} file structures with diffing, previews, and collaborative cues.",
-        "Plugged into ShopiCSV and other storefront tools to visualise asset changes before release.",
-        "Improved merchant QA workflows by giving non-technical editors a safe review surface."
-      ],
-      "technologies": ["TypeScript", "React", "Shopify Polaris"]
-    },
-    {
-      "name": "Plankton Synapse",
-      "images": ["../images/plankton1.webp", "../images/plankton2.webp"],
-      "year": 2018,
-      "demoUrl": "https://zyriab.github.io/Plankton-Synapse/",
-      "githubUrl": "https://www.github.com/zyriab/Plankton-Synapse",
-      "content": [
-        "Indie strategy game where players evolve modular neural networks to outsmart rival plankton colonies.",
-        "Handled {{game design}}, {{AI}}, UI, and tooling end-to-end—from prototyping in C# to balancing gameplay in Unity.",
-        "Currently rewriting in {{Go}} with {{Raylib}} to explore deterministic replays and online multiplayer."
-      ],
-      "technologies": ["C#", "Unity", "Go", "Raylib"]
+      "technologies": ["Tech 1", "Tech 2", "Tech 3"]
     }
   ]
 }

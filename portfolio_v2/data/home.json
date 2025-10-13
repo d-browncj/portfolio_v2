@@ -2,32 +2,26 @@
   "data": [
     {
       "content": [
-        "Hi, I'm {{Sohaib}} Mokhliss 👨‍💻",
-        "I build dependable {{backend platforms}} and cloud-native systems that keep products fast, observable, and secure."
+        "Hi, I'm {{Sohaib Mokhliss}} 👨‍💻",
+        "5th-year {{Computer & Network Engineering}} student at EMSI with a background in {{Cybersecurity}}."
       ]
     },
     {
       "content": [
-        "I currently lead platform engineering at {{ByteBakers}}, guiding teams through migrations from monoliths to event-driven services and mentoring engineers along the way.",
-        "My focus is pairing {{reliability}} with developer velocity through automation, infrastructure-as-code, and thoughtful architecture."
+        "I hold a {{Specialized Technician}} diploma in Cybersecurity from ISTA and have hands-on experience through internships at {{HPS}}, {{CIH}}, and {{ITPay}}.",
+        "Started with {{security}} and {{penetration testing}}, I've grown increasingly interested in {{DevOps}} and infrastructure automation."
       ]
     },
     {
       "content": [
-        "Tooling sweet spots: {{Go}}, {{TypeScript}}, {{PostgreSQL}}, Terraform, Kubernetes, and AWS.",
-        "I love designing feedback loops around {{observability}}, CI/CD, and security so shipping stays predictable."
+        "Current focus: {{Creation, configuration and maintenance}} of information systems, {{CI/CD automation}}, and modern DevOps practices.",
+        "Passionate about {{virtualization}} and {{hypervisors}}, I love working with virtual infrastructure and containerized environments to build flexible, efficient systems."
       ]
     },
     {
       "content": [
-        "Outside of work you’ll find me sharing notes on technical leadership, contributing to open source utilities, or iterating on personal SaaS ideas.",
-        "Let’s connect on <a href=\"https://www.linkedin.com/in/browncj/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a> or explore my repos on <a href=\"https://github.com/browncj/\" target=\"_blank\" class=\"text-pink\">GitHub</a>."
-      ]
-    },
-    {
-      "content": [
-        "Use the menu or keyboard shortcuts to jump into projects, experience, skills, and certifications.",
-        "The interface mirrors a favorite TUI workflow—feel free to roam."
+        "Connect with me on <a href=\"https://www.linkedin.com/in/sohaib-mokhliss/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a> or explore my work on <a href=\"https://github.com/sohaibmokhliss\" target=\"_blank\" class=\"text-pink\">GitHub</a>.",
+        "Feel free to reach out at <a href=\"mailto:sohaibmokhliss@gmail.com\" class=\"text-orange\">sohaibmokhliss@gmail.com</a> or call {{0679035810}}"
       ]
     }
   ]

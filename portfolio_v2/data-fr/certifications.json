@@ -1,70 +1,136 @@
 {
   "data": [
     {
-      "name": "AWS Certified Solutions Architect – Associate",
-      "issuer": "Amazon Web Services",
-      "date": "Valide jusqu'en Déc 2025",
-      "title": "Conception d'architectures AWS résilientes",
+      "name": "Introduction aux outils et cyberattaques de cybersécurité",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Fondamentaux de la cybersécurité",
       "content": [
-        "Capacité validée à architecturer des systèmes {{hautement disponibles}} et {{optimisés en coûts}} sur AWS.",
-        "Expérience avec {{ECS}}, {{Lambda}}, {{RDS}} et garde-fous sécurité sur configurations multi-comptes."
+        "Introduction complète aux outils de cybersécurité et méthodologies d'attaque.",
+        "Compréhension des diverses menaces cybernétiques et stratégies défensives.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
       ],
-      "certificateUrl": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM"
     },
     {
-      "name": "Google Cloud Professional Cloud Architect",
-      "issuer": "Google Cloud",
-      "date": "Valide jusqu'en Mai 2026",
-      "title": "Architecture d'entreprise sur GCP",
+      "name": "Les fondamentaux du hacking éthique",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Fondamentaux du hacking éthique",
       "content": [
-        "Conception et gouvernance de solutions sur {{GKE}}, {{Cloud Run}} et plateformes de données managées.",
-        "Focus sur l'équilibre entre fiabilité, sécurité et opérations durables pour charges globales."
+        "Principes fondamentaux et techniques du hacking éthique.",
+        "Expérience pratique avec les méthodologies de tests d'intrusion.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/SEKUFRZ4MCJL\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
       ],
-      "certificateUrl": "https://cloud.google.com/certification/cloud-architect"
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/SEKUFRZ4MCJL"
     },
     {
-      "name": "Certified Kubernetes Administrator (CKA)",
-      "issuer": "Cloud Native Computing Foundation",
-      "date": "Valide jusqu'en Sep 2026",
-      "title": "Exploitation de clusters Kubernetes en production",
+      "name": "L'atelier Unix",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Administration système Unix",
       "content": [
-        "Administration pratique de clusters {{Kubernetes}}, incluant réseau, stockage et dépannage.",
-        "Accent sur workflows GitOps, contrôles sécurité et observabilité pour environnements multi-équipes."
+        "Maîtrise des outils en ligne de commande Unix et administration système.",
+        "Compétence en scripts shell et automatisation.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/CSWHLEGRJ8Y5\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
       ],
-      "certificateUrl": "https://www.cncf.io/certification/cka/"
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/CSWHLEGRJ8Y5"
     },
     {
-      "name": "HashiCorp Terraform Associate",
-      "issuer": "HashiCorp",
-      "date": "Valide jusqu'en Août 2026",
-      "title": "Fondations Infrastructure as Code",
+      "name": "Droit du cloud computing",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Aspects juridiques du cloud computing",
       "content": [
-        "Codification infrastructure avec modules {{Terraform}}, workspaces et patterns de gestion d'état.",
-        "Intégration policy-as-code et pipelines automatisés pour garder environnements conformes par défaut."
+        "Compréhension des cadres juridiques régissant le cloud computing.",
+        "Connaissance des exigences de conformité et réglementaires.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/G8GBSVAUZ7WJ\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
       ],
-      "certificateUrl": "https://www.hashicorp.com/certification/terraform-associate"
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/G8GBSVAUZ7WJ"
     },
     {
-      "name": "DevOps Institute SRE Foundation",
-      "issuer": "DevOps Institute",
-      "date": "Émis Jan 2024",
-      "title": "Principes de Site Reliability Engineering",
+      "name": "Introduction aux conteneurs avec Docker, Kubernetes et OpenShift",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Technologies de conteneurisation",
       "content": [
-        "Fondations en {{SLOs}}, {{budgets d'erreur}} et frameworks d'amélioration continue.",
-        "Application de patterns de fiabilité aux roadmaps plateforme et playbooks de réponse incidents."
+        "Expérience pratique avec Docker, Kubernetes et OpenShift.",
+        "Compréhension des principes de conteneurisation et d'orchestration.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/records/PUB7Z3OOK044\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
       ],
-      "certificateUrl": "https://www.devopsinstitute.com/certifications/sre-foundation/"
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/records/PUB7Z3OOK044"
     },
     {
-      "name": "Scrum Alliance Certified ScrumMaster",
-      "issuer": "Scrum Alliance",
-      "date": "Valide jusqu'en Oct 2025",
-      "title": "Facilitation de livraison agile",
+      "name": "Programmation pour tous (Débuter avec Python)",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Programmation Python",
       "content": [
-        "Soutien équipes avec facilitation sprint, affinement backlog et communication parties prenantes.",
-        "Mélange pratiques agiles avec cadences ingénierie plateforme pour livraison durable."
+        "Compétences fondamentales en programmation Python.",
+        "Expérience avec les scripts et l'automatisation en Python.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/899D94P7NV7G\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
       ],
-      "certificateUrl": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/899D94P7NV7G"
+    },
+    {
+      "name": "Conception logicielle et gestion de projet",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Pratiques d'ingénierie logicielle",
+      "content": [
+        "Compréhension des principes et modèles de conception logicielle.",
+        "Connaissance des méthodologies de gestion de projet.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/3FTU2UDGZVGC\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/3FTU2UDGZVGC"
+    },
+    {
+      "name": "Introduction à HTML5",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Fondamentaux du développement web",
+      "content": [
+        "Concepts fondamentaux de HTML5 et principes de développement web.",
+        "Base pour créer des applications web modernes.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM"
+    },
+    {
+      "name": "Introduction à CSS3",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Stylisation et design web",
+      "content": [
+        "Techniques avancées de CSS3 pour le design web.",
+        "Design responsive et pratiques de stylisation modernes.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/RG6GU5JJKTH7\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/RG6GU5JJKTH7"
+    },
+    {
+      "name": "Interactivité avec JavaScript",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Développement JavaScript",
+      "content": [
+        "Développement web interactif avec JavaScript.",
+        "Manipulation du DOM et gestion des événements.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/TGFZZRRVVM2R\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/TGFZZRRVVM2R"
+    },
+    {
+      "name": "Introduction à la programmation orientée objet",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Programmation orientée objet",
+      "content": [
+        "Fondamentaux des concepts de programmation orientée objet.",
+        "Modèles de conception et meilleures pratiques POO.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/YJVVRN8TPPAZ\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/YJVVRN8TPPAZ"
     }
   ]
 }

@@ -1,112 +1,49 @@
 {
   "data": [
     {
-      "name": "Go",
+      "name": "Penetration Testing",
       "content": [
-        "My go-to language for building {{backend services}} and automation that need predictable performance.",
-        "Leverage {{goroutines}} and {{channels}} to orchestrate event-driven pipelines and long-running workers.",
-        "Delivery-ready with tooling such as {{Go modules}}, linting, and structured logging baked into the workflow."
-      ],
-      "snippet": "go"
-    },
-    {
-      "name": "TypeScript",
-      "content": [
-        "Used across APIs, CLIs, and UI codebases for the combination of {{static typing}} and fast iteration.",
-        "Share {{contracts}} between services and frontends to reduce runtime surprises and improve developer confidence.",
-        "Pair with {{ESBuild}}, {{Vitest}}, and modern bundlers for feedback loops measured in seconds."
-      ],
-      "snippet": "ts"
-    },
-    {
-      "name": "Node.js",
-      "content": [
-        "Ideal for building developer tooling, orchestrators, and integration surfaces that glue platforms together.",
-        "Comfortable mixing {{Express}}, {{Fastify}}, or bespoke HTTP layers when latency budgets are tight.",
-        "Combine with {{Prisma}} or {{TypeORM}} plus robust test harnesses for resilient services."
-      ],
-      "snippet": "mjs"
-    },
-    {
-      "name": "React",
-      "content": [
-        "Framework of choice for crafting data-heavy dashboards and internal tooling with strong ergonomics.",
-        "Lean on {{hooks}}, {{React Query}}, and design systems to keep experiences cohesive across products.",
-        "Ship with {{TypeScript}} and Storybook-driven documentation to keep teams aligned."
-      ],
-      "snippet": "tsx"
-    },
-    {
-      "name": "GraphQL",
-      "content": [
-        "Design and operate {{GraphQL}} schemas that front microservices, legacy APIs, and domain aggregates.",
-        "Introduce federation patterns, schema registries, and persisted queries to keep clients performant.",
-        "Build tooling for schema diffing, change management, and automated checks in CI/CD."
-      ],
-      "snippet": "graphql"
-    },
-    {
-      "name": "PostgreSQL",
-      "content": [
-        "Default relational database for transactional workloads and analytics sidecars.",
-        "Comfortable with {{PL/pgSQL}}, indexing strategies, and partitioning for high-volume datasets.",
-        "Pair with {{TimescaleDB}}, {{pgBouncer}}, and carefully tuned EXPLAIN plans to keep latency low."
-      ],
-      "snippet": "sql"
-    },
-    {
-      "name": "AWS",
-      "content": [
-        "Architect workloads across {{AWS}} services spanning ECS, Lambda, Step Functions, and managed databases.",
-        "Design guardrails with {{IAM}}, {{CloudWatch}}, and {{Security Hub}} to keep environments safe by default.",
-        "Cost-aware operations through {{Savings Plans}}, right-sizing, and telemetry-driven optimisation."
+        "Experienced in conducting security assessments and intrusion testing.",
+        "Proficient in identifying vulnerabilities in web applications and networks.",
+        "Hands-on practice with modern penetration testing tools and methodologies."
       ],
       "snippet": null
     },
     {
-      "name": "Terraform & IaC",
+      "name": "Network Security",
       "content": [
-        "Codify infrastructure with reusable {{Terraform}} modules and blueprints adopted across teams.",
-        "Implement {{policy-as-code}} via Sentinel and Open Policy Agent to enforce best practices.",
-        "Automate planning, drift detection, and applies through continuous delivery pipelines."
+        "Strong understanding of network protocols and security measures.",
+        "Experience monitoring network traffic and identifying security threats.",
+        "Knowledge of firewalls, IDS/IPS, and network segmentation."
       ],
       "snippet": null
     },
     {
-      "name": "Kubernetes & Containers",
+      "name": "Incident Response",
       "content": [
-        "Operate production {{Kubernetes}} clusters on EKS, GKE, and self-managed nodes with GitOps workflows.",
-        "Tune manifests, {{Helm}} charts, and resource policies for predictable scaling and efficiency.",
-        "Instrument deployments with {{Prometheus}}, {{Loki}}, and {{Grafana}} for end-to-end visibility."
+        "Trained in responding to security incidents and breaches.",
+        "Experience with security monitoring and threat detection.",
+        "Familiar with incident response procedures and best practices."
       ],
       "snippet": null
     },
     {
-      "name": "Observability & Reliability",
+      "name": "Security Analysis",
       "content": [
-        "Build observability stacks using {{OpenTelemetry}}, {{Grafana}}, and {{ClickHouse}} to centralise signals.",
-        "Define SLOs, incident response rituals, and feedback loops that empower platform teams.",
-        "Introduce {{chaos experiments}} and structured postmortems to continually raise reliability."
+        "Skilled in analyzing security vulnerabilities and threats.",
+        "Experience with vulnerability assessment tools and techniques.",
+        "Ability to provide security recommendations and implement protective measures."
       ],
       "snippet": null
     },
     {
-      "name": "Testing & Quality",
+      "name": "DevOps & Automation",
       "content": [
-        "Approach testing strategically: {{unit}}, {{contract}}, and {{load}} coverage aligned with risk.",
-        "Embed fast pipelines with {{Vitest}}, {{Jest}}, and {{go test}} to give engineers confidence.",
-        "Use synthetic monitoring and smoke suites to validate deployments post-launch."
+        "Growing interest in DevOps practices and automation.",
+        "Experience with system administration tasks.",
+        "Curiosity for cloud security and infrastructure management."
       ],
-      "snippet": "test"
-    },
-    {
-      "name": "Developer Experience",
-      "content": [
-        "Create CLIs, templates, and {{documentation}} that remove friction for product teams.",
-        "Champion inner-loop improvements with hot reload, local stacks, and remote dev environments.",
-        "Mentor teams on {{code reviews}}, pairing, and knowledge-sharing rhythms."
-      ],
-      "snippet": "sh"
+      "snippet": null
     }
   ]
 }

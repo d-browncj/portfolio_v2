@@ -2,32 +2,26 @@
   "data": [
     {
       "content": [
-        "Salut, je suis {{Sohaib}} Mokhliss 👨‍💻",
-        "Je construis des {{plateformes backend}} fiables et des systèmes cloud-natifs qui maintiennent les produits rapides, observables et sécurisés."
+        "Salut, je suis {{Sohaib Mokhliss}} 👨‍💻",
+        "Étudiant en 5e année d'{{ingénierie informatique et réseaux}} à l'EMSI avec une formation en {{Cybersécurité}}."
       ]
     },
     {
       "content": [
-        "Je dirige actuellement l'ingénierie de plateforme chez {{ByteBakers}}, guidant les équipes dans les migrations de monolithes vers des services événementiels et en encadrant les ingénieurs.",
-        "Mon objectif est d'associer la {{fiabilité}} à la vélocité des développeurs grâce à l'automatisation, l'infrastructure-as-code et une architecture réfléchie."
+        "Je suis titulaire d'un diplôme de {{technicien spécialisé}} en Cybersécurité de l'ISTA et j'ai acquis une expérience pratique grâce à des stages chez {{HPS}}, {{CIH}} et {{ITPay}}.",
+        "Ayant commencé par la {{sécurité}} et les {{tests d'intrusion}}, je me suis de plus en plus intéressé au {{DevOps}} et à l'automatisation d'infrastructure."
       ]
     },
     {
       "content": [
-        "Outils de prédilection : {{Go}}, {{TypeScript}}, {{PostgreSQL}}, Terraform, Kubernetes et AWS.",
-        "J'adore concevoir des boucles de rétroaction autour de l'{{observabilité}}, CI/CD et la sécurité pour que les déploiements restent prévisibles."
+        "Focus actuel : {{Création, configuration et maintenance}} des systèmes d'information, {{automatisation CI/CD}}, et pratiques DevOps modernes.",
+        "Passionné par la {{virtualisation}} et les {{hyperviseurs}}, j'adore travailler avec l'infrastructure virtuelle et les environnements conteneurisés pour construire des systèmes flexibles et efficaces."
       ]
     },
     {
       "content": [
-        "En dehors du travail, vous me trouverez en train de partager des notes sur le leadership technique, de contribuer à des utilitaires open source ou d'itérer sur des idées SaaS personnelles.",
-        "Connectons-nous sur <a href=\"https://www.linkedin.com/in/browncj/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a> ou explorez mes dépôts sur <a href=\"https://github.com/browncj/\" target=\"_blank\" class=\"text-pink\">GitHub</a>."
-      ]
-    },
-    {
-      "content": [
-        "Utilisez le menu ou les raccourcis clavier pour accéder aux projets, expériences, compétences et certifications.",
-        "L'interface reflète un workflow TUI favori—n'hésitez pas à explorer."
+        "Connectez-vous avec moi sur <a href=\"https://www.linkedin.com/in/sohaib-mokhliss/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a> ou explorez mon travail sur <a href=\"https://github.com/sohaibmokhliss\" target=\"_blank\" class=\"text-pink\">GitHub</a>.",
+        "N'hésitez pas à me contacter à <a href=\"mailto:sohaibmokhliss@gmail.com\" class=\"text-orange\">sohaibmokhliss@gmail.com</a> ou appelez {{0679035810}}"
       ]
     }
   ]
