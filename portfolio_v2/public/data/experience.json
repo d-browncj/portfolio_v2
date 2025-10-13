@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "name": "Cybersecurity Analyst (Intern)",
+      "company": "HPS",
+      "date": "June–July 2023 (2 months)",
+      "title": "Cybersecurity Analyst",
+      "content": [
+        "Worked with the wider security team on network monitoring and vulnerability assessment.",
+        "Monitored network traffic and identified security vulnerabilities.",
+        "Implemented security measures to protect critical systems and infrastructure."
+      ],
+      "technologies": ["Network Security", "Vulnerability Assessment", "Security Monitoring", "Incident Response"]
+    },
+    {
+      "name": "Penetration Tester (Intern)",
+      "company": "CIH",
+      "date": "2024 (1 month)",
+      "title": "Penetration Tester",
+      "content": [
+        "Collaborated with the development team on security testing initiatives.",
+        "Participated in intrusion testing and vulnerability assessments.",
+        "Gained exposure to web design/content and SEO/branding tasks."
+      ],
+      "technologies": ["Penetration Testing", "Web Application Security", "Security Testing", "Vulnerability Assessment"]
+    },
+    {
+      "name": "DevOps/Security Intern",
+      "company": "ITPay",
+      "date": "August–September 2025 (2 months)",
+      "title": "DevOps & Security Intern",
+      "content": [
+        "Contributed to payment systems security and infrastructure.",
+        "Worked on automation and system administration tasks.",
+        "Gained hands-on experience with modern DevOps practices."
+      ],
+      "technologies": ["DevOps", "Security", "Automation", "System Administration"]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "name": "Analyste cybersécurité (Stagiaire)",
+      "company": "HPS",
+      "date": "juin–juillet 2023 (2 mois)",
+      "title": "Analyste cybersécurité",
+      "content": [
+        "Collaboration avec l'équipe de sécurité élargie sur la surveillance réseau et l'évaluation des vulnérabilités.",
+        "Surveillance du trafic réseau et identification des vulnérabilités de sécurité.",
+        "Mise en œuvre de mesures de sécurité pour protéger les systèmes et infrastructures critiques."
+      ],
+      "technologies": ["Sécurité réseau", "Évaluation des vulnérabilités", "Surveillance de sécurité", "Réponse aux incidents"]
+    },
+    {
+      "name": "Pentester (Stagiaire)",
+      "company": "CIH",
+      "date": "2024 (1 mois)",
+      "title": "Pentester",
+      "content": [
+        "Collaboration avec l'équipe de développement sur les initiatives de tests de sécurité.",
+        "Participation à des tests d'intrusion et évaluations de vulnérabilités.",
+        "Exposition à des tâches de design web/contenu et SEO/branding."
+      ],
+      "technologies": ["Tests d'intrusion", "Sécurité des applications web", "Tests de sécurité", "Évaluation des vulnérabilités"]
+    },
+    {
+      "name": "Stagiaire DevOps/Sécurité",
+      "company": "ITPay",
+      "date": "août–septembre 2025 (2 mois)",
+      "title": "Stagiaire DevOps & Sécurité",
+      "content": [
+        "Contribution à la sécurité et l'infrastructure des systèmes de paiement.",
+        "Travail sur des tâches d'automatisation et d'administration système.",
+        "Acquisition d'une expérience pratique avec les pratiques DevOps modernes."
+      ],
+      "technologies": ["DevOps", "Sécurité", "Automatisation", "Administration système"]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "content": [
+        "Salut, je suis {{Sohaib Mokhliss}} 👨‍💻",
+        "Étudiant en 5e année d'{{ingénierie informatique et réseaux}} à l'EMSI avec une formation en {{Cybersécurité}}."
+      ]
+    },
+    {
+      "content": [
+        "Je suis titulaire d'un diplôme de {{technicien spécialisé}} en Cybersécurité de l'ISTA et j'ai acquis une expérience pratique grâce à des stages chez {{HPS}}, {{CIH}} et {{ITPay}}.",
+        "Ayant commencé par la {{sécurité}} et les {{tests d'intrusion}}, je me suis de plus en plus intéressé au {{DevOps}} et à l'automatisation d'infrastructure."
+      ]
+    },
+    {
+      "content": [
+        "Focus actuel : {{Création, configuration et maintenance}} des systèmes d'information, {{automatisation CI/CD}}, et pratiques DevOps modernes.",
+        "Passionné par la {{virtualisation}} et les {{hyperviseurs}}, j'adore travailler avec l'infrastructure virtuelle et les environnements conteneurisés pour construire des systèmes flexibles et efficaces."
+      ]
+    },
+    {
+      "content": [
+        "Connectez-vous avec moi sur <a href=\"https://www.linkedin.com/in/sohaib-mokhliss/\" target=\"_blank\" class=\"text-blue\">LinkedIn</a> ou explorez mon travail sur <a href=\"https://github.com/sohaibmokhliss\" target=\"_blank\" class=\"text-pink\">GitHub</a>.",
+        "N'hésitez pas à me contacter à <a href=\"mailto:sohaibmokhliss@gmail.com\" class=\"text-orange\">sohaibmokhliss@gmail.com</a> ou appelez {{0679035810}}"
+      ]
+    }
+  ]
+}

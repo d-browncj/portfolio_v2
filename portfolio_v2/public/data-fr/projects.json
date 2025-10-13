@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "name": "Nom de Votre Projet",
+      "year": 2024,
+      "githubUrl": "https://github.com/yourusername/yourproject",
+      "demoUrl": "https://yourproject.com",
+      "content": [
+        "Décrivez votre projet ici.",
+        "Ajoutez les fonctionnalités clés et les technologies utilisées.",
+        "Expliquez l'impact ou les résultats obtenus."
+      ],
+      "technologies": ["Tech 1", "Tech 2", "Tech 3"]
+    }
+  ]
+}

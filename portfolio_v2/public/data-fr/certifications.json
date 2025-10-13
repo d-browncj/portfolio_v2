@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "name": "Introduction aux outils et cyberattaques de cybersécurité",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Fondamentaux de la cybersécurité",
+      "content": [
+        "Introduction complète aux outils de cybersécurité et méthodologies d'attaque.",
+        "Compréhension des diverses menaces cybernétiques et stratégies défensives.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM"
+    },
+    {
+      "name": "Les fondamentaux du hacking éthique",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Fondamentaux du hacking éthique",
+      "content": [
+        "Principes fondamentaux et techniques du hacking éthique.",
+        "Expérience pratique avec les méthodologies de tests d'intrusion.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/SEKUFRZ4MCJL\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/SEKUFRZ4MCJL"
+    },
+    {
+      "name": "L'atelier Unix",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Administration système Unix",
+      "content": [
+        "Maîtrise des outils en ligne de commande Unix et administration système.",
+        "Compétence en scripts shell et automatisation.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/CSWHLEGRJ8Y5\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/CSWHLEGRJ8Y5"
+    },
+    {
+      "name": "Droit du cloud computing",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Aspects juridiques du cloud computing",
+      "content": [
+        "Compréhension des cadres juridiques régissant le cloud computing.",
+        "Connaissance des exigences de conformité et réglementaires.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/G8GBSVAUZ7WJ\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/G8GBSVAUZ7WJ"
+    },
+    {
+      "name": "Introduction aux conteneurs avec Docker, Kubernetes et OpenShift",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Technologies de conteneurisation",
+      "content": [
+        "Expérience pratique avec Docker, Kubernetes et OpenShift.",
+        "Compréhension des principes de conteneurisation et d'orchestration.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/records/PUB7Z3OOK044\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/records/PUB7Z3OOK044"
+    },
+    {
+      "name": "Programmation pour tous (Débuter avec Python)",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Programmation Python",
+      "content": [
+        "Compétences fondamentales en programmation Python.",
+        "Expérience avec les scripts et l'automatisation en Python.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/899D94P7NV7G\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/899D94P7NV7G"
+    },
+    {
+      "name": "Conception logicielle et gestion de projet",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Pratiques d'ingénierie logicielle",
+      "content": [
+        "Compréhension des principes et modèles de conception logicielle.",
+        "Connaissance des méthodologies de gestion de projet.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/3FTU2UDGZVGC\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/3FTU2UDGZVGC"
+    },
+    {
+      "name": "Introduction à HTML5",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Fondamentaux du développement web",
+      "content": [
+        "Concepts fondamentaux de HTML5 et principes de développement web.",
+        "Base pour créer des applications web modernes.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM"
+    },
+    {
+      "name": "Introduction à CSS3",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Stylisation et design web",
+      "content": [
+        "Techniques avancées de CSS3 pour le design web.",
+        "Design responsive et pratiques de stylisation modernes.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/RG6GU5JJKTH7\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/RG6GU5JJKTH7"
+    },
+    {
+      "name": "Interactivité avec JavaScript",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Développement JavaScript",
+      "content": [
+        "Développement web interactif avec JavaScript.",
+        "Manipulation du DOM et gestion des événements.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/TGFZZRRVVM2R\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/TGFZZRRVVM2R"
+    },
+    {
+      "name": "Introduction à la programmation orientée objet",
+      "issuer": "Coursera",
+      "date": "Complété",
+      "title": "Programmation orientée objet",
+      "content": [
+        "Fondamentaux des concepts de programmation orientée objet.",
+        "Modèles de conception et meilleures pratiques POO.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/YJVVRN8TPPAZ\" target=\"_blank\" class=\"text-blue\">Voir le certificat</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/YJVVRN8TPPAZ"
+    }
+  ]
+}

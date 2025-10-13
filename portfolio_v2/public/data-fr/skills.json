@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "name": "Tests d'intrusion",
+      "content": [
+        "Expérience dans la réalisation d'évaluations de sécurité et de tests d'intrusion.",
+        "Compétent dans l'identification des vulnérabilités des applications web et des réseaux.",
+        "Pratique des outils et méthodologies modernes de tests d'intrusion."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Sécurité réseau",
+      "content": [
+        "Solide compréhension des protocoles réseau et des mesures de sécurité.",
+        "Expérience dans la surveillance du trafic réseau et l'identification des menaces de sécurité.",
+        "Connaissance des pare-feu, IDS/IPS et de la segmentation réseau."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Réponse aux incidents",
+      "content": [
+        "Formé à la réponse aux incidents et violations de sécurité.",
+        "Expérience en surveillance de la sécurité et détection des menaces.",
+        "Familier avec les procédures et meilleures pratiques de réponse aux incidents."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Analyse de sécurité",
+      "content": [
+        "Compétent dans l'analyse des vulnérabilités et menaces de sécurité.",
+        "Expérience avec les outils et techniques d'évaluation des vulnérabilités.",
+        "Capacité à fournir des recommandations de sécurité et à mettre en œuvre des mesures de protection."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "DevOps et Automatisation",
+      "content": [
+        "Intérêt croissant pour les pratiques DevOps et l'automatisation.",
+        "Expérience avec les tâches d'administration système.",
+        "Curiosité pour la sécurité cloud et la gestion d'infrastructure."
+      ],
+      "snippet": null
+    }
+  ]
+}

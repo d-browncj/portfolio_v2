@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "name": "Introduction to Cybersecurity Tools & Cyberattacks",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Cybersecurity Fundamentals",
+      "content": [
+        "Comprehensive introduction to cybersecurity tools and attack methodologies.",
+        "Understanding of various cyber threats and defensive strategies.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM"
+    },
+    {
+      "name": "Ethical Hacking Essentials",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Ethical Hacking Fundamentals",
+      "content": [
+        "Core principles and techniques of ethical hacking.",
+        "Hands-on experience with penetration testing methodologies.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/SEKUFRZ4MCJL\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/SEKUFRZ4MCJL"
+    },
+    {
+      "name": "The Unix Workbench",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Unix System Administration",
+      "content": [
+        "Mastery of Unix command-line tools and system administration.",
+        "Proficiency in shell scripting and automation.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/CSWHLEGRJ8Y5\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/CSWHLEGRJ8Y5"
+    },
+    {
+      "name": "Cloud Computing Law",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Legal Aspects of Cloud Computing",
+      "content": [
+        "Understanding of legal frameworks governing cloud computing.",
+        "Knowledge of compliance and regulatory requirements.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/G8GBSVAUZ7WJ\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/G8GBSVAUZ7WJ"
+    },
+    {
+      "name": "Introduction to Containers with Docker, Kubernetes & OpenShift",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Container Technologies",
+      "content": [
+        "Hands-on experience with Docker, Kubernetes, and OpenShift.",
+        "Understanding of containerization and orchestration principles.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/records/PUB7Z3OOK044\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/records/PUB7Z3OOK044"
+    },
+    {
+      "name": "Programming for Everybody (Getting Started with Python)",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Python Programming",
+      "content": [
+        "Foundational Python programming skills.",
+        "Experience with scripting and automation using Python.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/899D94P7NV7G\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/899D94P7NV7G"
+    },
+    {
+      "name": "Software Design and Project Management",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Software Engineering Practices",
+      "content": [
+        "Understanding of software design principles and patterns.",
+        "Knowledge of project management methodologies.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/3FTU2UDGZVGC\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/3FTU2UDGZVGC"
+    },
+    {
+      "name": "Introduction to HTML5",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Web Development Fundamentals",
+      "content": [
+        "Core HTML5 concepts and web development principles.",
+        "Foundation for building modern web applications.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/LDPZXF7NPWEM"
+    },
+    {
+      "name": "Introduction to CSS3",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Web Styling and Design",
+      "content": [
+        "Advanced CSS3 techniques for web design.",
+        "Responsive design and modern styling practices.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/RG6GU5JJKTH7\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/RG6GU5JJKTH7"
+    },
+    {
+      "name": "Interactivity with JavaScript",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "JavaScript Development",
+      "content": [
+        "Interactive web development using JavaScript.",
+        "DOM manipulation and event handling.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/TGFZZRRVVM2R\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/TGFZZRRVVM2R"
+    },
+    {
+      "name": "Introduction à la programmation orientée objet",
+      "issuer": "Coursera",
+      "date": "Completed",
+      "title": "Object-Oriented Programming",
+      "content": [
+        "Fundamentals of object-oriented programming concepts.",
+        "Design patterns and OOP best practices.",
+        "<a href=\"https://www.coursera.org/account/accomplishments/verify/YJVVRN8TPPAZ\" target=\"_blank\" class=\"text-blue\">View Certificate</a>"
+      ],
+      "certificateUrl": "https://www.coursera.org/account/accomplishments/verify/YJVVRN8TPPAZ"
+    }
+  ]
+}

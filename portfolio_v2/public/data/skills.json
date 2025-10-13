@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "name": "Penetration Testing",
+      "content": [
+        "Experienced in conducting security assessments and intrusion testing.",
+        "Proficient in identifying vulnerabilities in web applications and networks.",
+        "Hands-on practice with modern penetration testing tools and methodologies."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Network Security",
+      "content": [
+        "Strong understanding of network protocols and security measures.",
+        "Experience monitoring network traffic and identifying security threats.",
+        "Knowledge of firewalls, IDS/IPS, and network segmentation."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Incident Response",
+      "content": [
+        "Trained in responding to security incidents and breaches.",
+        "Experience with security monitoring and threat detection.",
+        "Familiar with incident response procedures and best practices."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "Security Analysis",
+      "content": [
+        "Skilled in analyzing security vulnerabilities and threats.",
+        "Experience with vulnerability assessment tools and techniques.",
+        "Ability to provide security recommendations and implement protective measures."
+      ],
+      "snippet": null
+    },
+    {
+      "name": "DevOps & Automation",
+      "content": [
+        "Growing interest in DevOps practices and automation.",
+        "Experience with system administration tasks.",
+        "Curiosity for cloud security and infrastructure management."
+      ],
+      "snippet": null
+    }
+  ]
+}
