@@ -1,3 +1,6 @@
+// Import LanguageManager for translation support
+import { LanguageManager } from './language.js';
+
 const MAIN_CONTAINER = document.getElementById("main-container");
 const LAYOUT = document.getElementById("layout");
 const SIDEBAR = document.getElementById("sidebar");
@@ -468,9 +471,7 @@ async function displayContent() {
 
   const sectionName = left_sections[currentPosition.sectionIndex].name;
 
-  const dataPath = typeof LanguageManager !== 'undefined'
-    ? LanguageManager.getDataPath(sectionName)
-    : `data/${sectionName}.json`;
+  const dataPath = LanguageManager.getDataPath(sectionName);
   const response = await fetch(dataPath);
   const { data } = await response.json();
 
@@ -973,6 +974,11 @@ async function init() {
   initSidebarScrollbar();
   initImageModal();
 
+  // Listen for language changes
+  window.addEventListener('languageChanged', async () => {
+    await displayContent();
+  });
+
   await render(true, true);
 
   // Initialize taskbar to show home as active
@@ -1291,4 +1297,11 @@ function initImageModal() {
       document.body.style.overflow = "";
     }
   });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => init());
+} else {
+  init();
 }

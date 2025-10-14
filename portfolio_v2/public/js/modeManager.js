@@ -1,3 +1,6 @@
+// Import Terminal for terminal mode switching
+import { Terminal, setModeManager } from './terminal.js';
+
 // Mode Manager - Handles switching between GUI and Terminal modes
 const ModeManager = {
   currentMode: 'gui', // 'gui' or 'terminal'
@@ -9,7 +12,7 @@ const ModeManager = {
     this.attachEventListeners();
 
     // If starting in terminal mode, show welcome
-    if (this.currentMode === 'terminal' && typeof Terminal !== 'undefined') {
+    if (this.currentMode === 'terminal') {
       setTimeout(() => {
         const output = document.getElementById('terminal-output');
         if (output && output.children.length === 0) {
@@ -27,7 +30,7 @@ const ModeManager = {
     this.applyMode(mode);
 
     // Initialize terminal output if switching to terminal mode
-    if (mode === 'terminal' && typeof Terminal !== 'undefined') {
+    if (mode === 'terminal') {
       // Use setTimeout to ensure DOM is ready
       setTimeout(() => {
         const output = document.getElementById('terminal-output');
@@ -88,6 +91,9 @@ const ModeManager = {
     }
   }
 };
+
+// Set ModeManager reference in Terminal so gui command works
+setModeManager(ModeManager);
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {

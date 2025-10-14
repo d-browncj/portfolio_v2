@@ -1,3 +1,14 @@
+// Import LanguageManager for translation support
+import { LanguageManager } from './language.js';
+
+// ModeManager will be set by modeManager.js after it loads
+let ModeManager = null;
+
+// Function to set ModeManager from external module
+export function setModeManager(manager) {
+  ModeManager = manager;
+}
+
 // Terminal emulator with virtual file system
 const Terminal = {
   currentPath: '/home/sohaib',
@@ -15,11 +26,16 @@ const Terminal = {
     setTimeout(() => {
       this.attachEventListeners();
     }, 100);
+
+    // Listen for language changes
+    window.addEventListener('languageChanged', async () => {
+      await this.buildFileSystem();
+    });
     // Don't print welcome yet - wait for terminal mode to be activated
   },
 
   async buildFileSystem() {
-    const lang = typeof LanguageManager !== 'undefined' ? LanguageManager.currentLang : 'en';
+    const lang = LanguageManager.currentLang;
     const dataFolder = lang === 'fr' ? 'data-fr' : 'data';
 
     // Fetch all data files
@@ -416,7 +432,7 @@ Navigation:
     },
 
     gui() {
-      if (typeof ModeManager !== 'undefined') {
+      if (ModeManager) {
         ModeManager.switchMode('gui');
       }
     },
@@ -745,6 +761,9 @@ Navigation:
     return matches;
   }
 };
+
+// Export Terminal for use in other modules
+export { Terminal };
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {

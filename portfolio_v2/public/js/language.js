@@ -38,9 +38,8 @@ const LanguageManager = {
     this.updateStaticText();
 
     // Reload content with new language
-    if (typeof displayContent === 'function') {
-      displayContent();
-    }
+    // Dispatch custom event for other modules to listen to
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
   },
 
   getDataPath(filename) {
@@ -97,6 +96,9 @@ const LanguageManager = {
     });
   }
 };
+
+// Export for use in other modules
+export { LanguageManager };
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
