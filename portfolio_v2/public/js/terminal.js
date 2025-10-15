@@ -20,7 +20,15 @@ const Terminal = {
 
   async init() {
     console.log('Terminal.init() called');
-    await this.buildFileSystem();
+
+    // Wait for LanguageManager to be ready before building file system
+    if (LanguageManager.initialized) {
+      await this.buildFileSystem();
+    } else {
+      window.addEventListener('languageManagerReady', async () => {
+        await this.buildFileSystem();
+      }, { once: true });
+    }
 
     // Delay attaching listeners to ensure DOM is ready
     setTimeout(() => {
@@ -35,21 +43,17 @@ const Terminal = {
   },
 
   async buildFileSystem() {
-    const lang = LanguageManager.currentLang;
-    const dataFolder = lang === 'fr' ? 'data-fr' : 'data';
-
-    // Fetch all data files
     const sections = ['home', 'experience', 'projects', 'skills', 'certifications'];
     const fileData = {};
 
-    for (const section of sections) {
+    await Promise.all(sections.map(async (section) => {
       try {
-        const response = await fetch(`${dataFolder}/${section}.json`);
-        fileData[section] = await response.json();
-      } catch (e) {
-        console.error(`Failed to load ${section}:`, e);
+        fileData[section] = await LanguageManager.fetchSectionData(section);
+      } catch (error) {
+        console.error(`[Terminal] Failed to load ${section}:`, error);
+        fileData[section] = null;
       }
-    }
+    }));
 
     // Build virtual file system structure
     this.fileSystem = {

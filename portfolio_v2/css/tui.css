@@ -1316,6 +1316,9 @@ svg {
 #home-section-paragraph {
   padding: 0 0.5rem;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .footer-item {
@@ -2159,30 +2162,32 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   display: none;
   position: fixed;
   z-index: 9999;
-  padding-top: 60px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  padding: 0;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(8px);
   animation: fadeIn 0.3s ease;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-modal.active {
-  display: block;
+  display: flex;
 }
 
 .image-modal-content {
-  margin: auto;
   display: block;
-  max-width: 90%;
-  max-height: 85vh;
+  width: 100vw;
+  height: 100vh;
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
   animation: zoomIn 0.3s ease;
+  margin: 0;
 }
 
 @keyframes zoomIn {

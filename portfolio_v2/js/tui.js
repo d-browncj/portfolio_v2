@@ -32,6 +32,10 @@ const SIDEBAR_SCROLLBAR_STATE = {
 
 const SIDEBAR_SCROLLBAR_MIN_THUMB = 48;
 
+const IMAGE_MODAL_STATE = {
+  closeHandlersBound: false,
+};
+
 const left_sections = [
   { name: "home", section: HOME_SECTION, items: [] },
   {
@@ -458,192 +462,290 @@ function closeHamburgerMenu() {
 }
 
 function clearMainContent() {
+  if (!MAIN_CONTENT_SECTION) return;
   MAIN_CONTENT_SECTION.innerHTML = "";
   MAIN_CONTENT_SECTION.scrollTo({ top: 0 });
 }
 
-async function displayContent() {
-  // Save profile pic if it exists
-  const existingProfilePic = document.getElementById('terminal-profile-pic-container');
-  const savedProfilePic = existingProfilePic ? existingProfilePic.cloneNode(true) : null;
+function createProfilePictureElement() {
+  const profilePicContainer = document.createElement("div");
+  profilePicContainer.id = "terminal-profile-pic-container";
 
-  clearMainContent();
+  const profilePicImg = document.createElement("img");
+  profilePicImg.src = "images/profilePic.jpg";
+  profilePicImg.alt = "Sohaib Mokhliss";
+  profilePicImg.id = "terminal-profile-pic";
 
-  const sectionName = left_sections[currentPosition.sectionIndex].name;
+  profilePicContainer.appendChild(profilePicImg);
+  return profilePicContainer;
+}
 
-  const dataPath = LanguageManager.getDataPath(sectionName);
-  const response = await fetch(dataPath);
-  const { data } = await response.json();
+function setupProfilePicModal() {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-image");
+  const closeBtn = document.querySelector(".image-modal-close");
 
-  const outerContainerElement = document.createElement("div");
-  outerContainerElement.classList.add("outer-paragraph-container");
-
-  // Always restore profile pic for home section - create if it doesn't exist
-  if (sectionName === "home") {
-    let profilePicToUse = savedProfilePic;
-
-    // If no saved profile pic exists, create one from scratch
-    if (!profilePicToUse) {
-      const profilePicContainer = document.createElement("div");
-      profilePicContainer.id = "terminal-profile-pic-container";
-
-      const profilePicImg = document.createElement("img");
-      profilePicImg.src = "images/profilePic.jpg";
-      profilePicImg.alt = "Sohaib Mokhliss";
-      profilePicImg.id = "terminal-profile-pic";
-
-      profilePicContainer.appendChild(profilePicImg);
-      profilePicToUse = profilePicContainer;
-    }
-
-    outerContainerElement.appendChild(profilePicToUse);
+  if (!modal || !modalImg || !closeBtn) {
+    return;
   }
 
-  const innerContainerElement = document.createElement("div");
-  innerContainerElement.classList.add("inner-paragraph-container");
+  const closeModal = () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  };
 
-  if (sectionName !== "home") {
-    innerContainerElement.classList.add("mt-4");
-
-    const sectionData = data[currentPosition.sectionItemIndex];
-    const topElement = document.createElement("div");
-
-    const titleElement = document.createElement("h1");
-    titleElement.innerHTML =
-      sectionData.title != null
-        ? `<span class="${getRandomTextColorClass()}">${sectionData.title}</span>`
-        : null;
-
-    const dateElement = document.createElement("h2");
-    dateElement.innerHTML =
-      sectionData.date != null
-        ? `<span class="${getRandomTextColorClass()}">${sectionData.date}</span>`
-        : null;
-
-    const yearElement = document.createElement("h2");
-    yearElement.innerHTML =
-      sectionData.year != null
-        ? `[Built in <span class="${getRandomTextColorClass()}">${sectionData.year}</span>]`
-        : null;
-
-    const technologiesContainerElement = document.createElement("div");
-    technologiesContainerElement.classList.add("technologies-row");
-    technologiesContainerElement.innerHTML =
-      sectionData.technologies?.map((t) => colorizeString(t)).join(" ") || null;
-
-    const githubButtonElement = document.createElement("a");
-    githubButtonElement.classList.add("project-button");
-    githubButtonElement.href = sectionData?.githubUrl;
-    githubButtonElement.target = "_blank";
-    githubButtonElement.innerText = "Github";
-
-    const demoButtonElement = document.createElement("a");
-    demoButtonElement.classList.add("project-button");
-    demoButtonElement.href = sectionData?.demoUrl;
-    demoButtonElement.target = "_blank";
-    demoButtonElement.innerText = "Demo";
-
-    const buttonsContainerElement = document.createElement("div");
-    buttonsContainerElement.classList.add("buttons-container");
-
-    if (sectionData?.githubUrl != null) {
-      buttonsContainerElement.appendChild(githubButtonElement);
-    }
-
-    if (sectionData?.demoUrl != null) {
-      buttonsContainerElement.appendChild(demoButtonElement);
-    }
-
-    if (titleElement.innerHTML != null) {
-      topElement.appendChild(titleElement);
-    }
-
-    if (dateElement.innerHTML != null) {
-      topElement.appendChild(dateElement);
-    }
-
-    if (yearElement.innerHTML != null) {
-      topElement.appendChild(yearElement);
-    }
-
-    if (technologiesContainerElement.innerHTML != null) {
-      topElement.appendChild(technologiesContainerElement);
-    }
-
-    if (buttonsContainerElement.children.length > 0) {
-      topElement.appendChild(buttonsContainerElement);
-    }
-
-    const imageElements =
-      sectionData.images?.map((imagePath) => {
-        const imageInnerContainerElement = document.createElement("div");
-        imageInnerContainerElement.style.minHeight = "200px";
-        imageInnerContainerElement.classList.add("image-inner-container");
-
-        const imageElement = document.createElement("img");
-        imageElement.loading = "lazy";
-        imageElement.alt = "Project image";
-        imageElement.decoding = "async";
-        imageElement.src = `images/${imagePath}`;
-        imageElement.classList.add("project-image");
-
-        imageInnerContainerElement.appendChild(imageElement);
-
-        return imageInnerContainerElement;
-      }) ?? [];
-
-    sectionData.content.forEach((c, i) => {
-      const element = document.createElement("div");
-
-      element.innerHTML = colorizeString(c).replaceAll("\n", "<br>");
-      innerContainerElement.appendChild(element);
-
-      if (i < imageElements.length) {
-        const imageContainerElement = document.createElement("div");
-        imageContainerElement.classList.add("image-container");
-        imageContainerElement.appendChild(imageElements[i]);
-
-        innerContainerElement.appendChild(imageContainerElement);
+  if (!IMAGE_MODAL_STATE.closeHandlersBound) {
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
       }
     });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+    IMAGE_MODAL_STATE.closeHandlersBound = true;
+  }
 
-    if (sectionData?.snippet != null) {
-      const snippetContainerElement = document.createElement("div");
-      snippetContainerElement.classList.add("snippet-container");
+  const profilePic = document.getElementById("terminal-profile-pic");
+  if (!profilePic || profilePic.dataset.modalBound === "true") {
+    return;
+  }
 
-      const snippetElement = document.createElement("pre");
-      const codeElement = document.createElement("code");
-      codeElement.classList.add(sectionData.snippet);
-      snippetElement.appendChild(codeElement);
-      codeElement.innerText = await getCodeSnippet(sectionData.snippet);
+  profilePic.addEventListener("click", () => {
+    modal.classList.add("active");
+    modalImg.src = profilePic.currentSrc || profilePic.src;
+    modalImg.alt = profilePic.alt || "Profile picture";
+    document.body.style.overflow = "hidden";
+  });
 
-      snippetContainerElement.appendChild(snippetElement);
-      innerContainerElement.appendChild(snippetContainerElement);
+  profilePic.dataset.modalBound = "true";
+}
+let isDisplayingContent = false;
+
+async function displayContent() {
+  if (isDisplayingContent || !MAIN_CONTENT_SECTION) {
+    return;
+  }
+
+  isDisplayingContent = true;
+  try {
+    clearMainContent();
+
+    const sectionName = left_sections[currentPosition.sectionIndex].name;
+    let payload;
+
+    try {
+      payload = await LanguageManager.fetchSectionData(sectionName);
+    } catch (error) {
+      console.error(`[TUI] Failed to load "${sectionName}" content:`, error);
+
+      const errorOuter = document.createElement('div');
+      errorOuter.classList.add('outer-paragraph-container');
+
+      const errorInner = document.createElement('div');
+      errorInner.classList.add('inner-paragraph-container');
+
+      const headline = document.createElement('p');
+      headline.classList.add('text-orange');
+      headline.textContent = `Unable to load ${sectionName} content.`;
+      errorInner.appendChild(headline);
+
+      const hint = document.createElement('p');
+      hint.textContent = 'Please try switching languages or reloading the page.';
+      errorInner.appendChild(hint);
+
+      errorOuter.appendChild(errorInner);
+      MAIN_CONTENT_SECTION.appendChild(errorOuter);
+      return;
     }
 
-    innerContainerElement.prepend(topElement);
-    outerContainerElement.appendChild(innerContainerElement);
+    const resolvedLang = payload?.__language || LanguageManager.currentLang;
+    const contentEntries = Array.isArray(payload?.data) ? payload.data : [];
 
-    MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
+    const outerContainerElement = document.createElement("div");
+    outerContainerElement.classList.add("outer-paragraph-container");
 
-    colorizeCode();
-  } else {
-    // Home section - no logo needed, profile pic is already added
+    if (sectionName === "home") {
+      outerContainerElement.appendChild(createProfilePictureElement());
+    }
 
-    data.forEach((d) => {
-      const element = document.createElement("div");
+    const innerContainerElement = document.createElement("div");
+    innerContainerElement.classList.add("inner-paragraph-container");
 
-      d.content.forEach((c) => {
-        const paragraph = document.createElement("p");
-        paragraph.innerHTML = colorizeString(c);
-        element.appendChild(paragraph);
+    if (sectionName !== "home") {
+      innerContainerElement.classList.add("mt-4");
+
+      const sectionData = contentEntries[currentPosition.sectionItemIndex];
+
+      if (!sectionData) {
+        const missing = document.createElement('p');
+        missing.classList.add('text-orange');
+        missing.textContent = 'Content unavailable for this selection.';
+        innerContainerElement.appendChild(missing);
+        outerContainerElement.appendChild(innerContainerElement);
+        MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
+        return;
+      }
+
+      const topElement = document.createElement("div");
+
+      const titleElement = document.createElement("h1");
+      titleElement.innerHTML =
+        sectionData.title != null
+          ? `<span class="${getRandomTextColorClass()}">${sectionData.title}</span>`
+          : null;
+
+      const dateElement = document.createElement("h2");
+      dateElement.innerHTML =
+        sectionData.date != null
+          ? `<span class="${getRandomTextColorClass()}">${sectionData.date}</span>`
+          : null;
+
+      const yearElement = document.createElement("h2");
+      yearElement.innerHTML =
+        sectionData.year != null
+          ? `[Built in <span class="${getRandomTextColorClass()}">${sectionData.year}</span>]`
+          : null;
+
+      const technologiesContainerElement = document.createElement("div");
+      technologiesContainerElement.classList.add("technologies-row");
+      technologiesContainerElement.innerHTML =
+        sectionData.technologies?.map((t) => colorizeString(t)).join(" ") || null;
+
+      const githubButtonElement = document.createElement("a");
+      githubButtonElement.classList.add("project-button");
+      githubButtonElement.href = sectionData?.githubUrl;
+      githubButtonElement.target = "_blank";
+      githubButtonElement.innerText = "Github";
+
+      const demoButtonElement = document.createElement("a");
+      demoButtonElement.classList.add("project-button");
+      demoButtonElement.href = sectionData?.demoUrl;
+      demoButtonElement.target = "_blank";
+      demoButtonElement.innerText = "Demo";
+
+      const buttonsContainerElement = document.createElement("div");
+      buttonsContainerElement.classList.add("buttons-container");
+
+      if (sectionData?.githubUrl != null) {
+        buttonsContainerElement.appendChild(githubButtonElement);
+      }
+
+      if (sectionData?.demoUrl != null) {
+        buttonsContainerElement.appendChild(demoButtonElement);
+      }
+
+      if (titleElement.innerHTML != null) {
+        topElement.appendChild(titleElement);
+      }
+
+      if (dateElement.innerHTML != null) {
+        topElement.appendChild(dateElement);
+      }
+
+      if (yearElement.innerHTML != null) {
+        topElement.appendChild(yearElement);
+      }
+
+      if (technologiesContainerElement.innerHTML != null) {
+        topElement.appendChild(technologiesContainerElement);
+      }
+
+      if (buttonsContainerElement.children.length > 0) {
+        topElement.appendChild(buttonsContainerElement);
+      }
+
+      const imageElements =
+        sectionData.images?.map((imagePath) => {
+          const imageInnerContainerElement = document.createElement("div");
+          imageInnerContainerElement.style.minHeight = "200px";
+          imageInnerContainerElement.classList.add("image-inner-container");
+
+          const imageElement = document.createElement("img");
+          imageElement.loading = "lazy";
+          imageElement.alt = "Project image";
+          imageElement.decoding = "async";
+          imageElement.src = `images/${imagePath}`;
+          imageElement.classList.add("project-image");
+
+          imageInnerContainerElement.appendChild(imageElement);
+
+          return imageInnerContainerElement;
+        }) ?? [];
+
+      (sectionData.content || []).forEach((contentBlock, index) => {
+        const element = document.createElement("div");
+        element.innerHTML = colorizeString(contentBlock).replaceAll("\n", "<br>");
+        innerContainerElement.appendChild(element);
+
+        if (index < imageElements.length) {
+          const imageContainerElement = document.createElement("div");
+          imageContainerElement.classList.add("image-container");
+          imageContainerElement.appendChild(imageElements[index]);
+
+          innerContainerElement.appendChild(imageContainerElement);
+        }
       });
 
-      innerContainerElement.appendChild(element);
-    });
+      if (sectionData?.snippet != null) {
+        const snippetContainerElement = document.createElement("div");
+        snippetContainerElement.classList.add("snippet-container");
 
-    outerContainerElement.appendChild(innerContainerElement);
-    MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
+        const snippetElement = document.createElement("pre");
+        const codeElement = document.createElement("code");
+        codeElement.classList.add(sectionData.snippet);
+        snippetElement.appendChild(codeElement);
+        codeElement.innerText = await getCodeSnippet(sectionData.snippet);
+
+        snippetContainerElement.appendChild(snippetElement);
+        innerContainerElement.appendChild(snippetContainerElement);
+      }
+
+      if (resolvedLang !== LanguageManager.currentLang) {
+        const fallbackNotice = document.createElement('p');
+        fallbackNotice.classList.add('text-orange');
+        fallbackNotice.style.marginTop = '16px';
+        fallbackNotice.textContent = 'Localized content is not available yet. Showing English instead.';
+        innerContainerElement.appendChild(fallbackNotice);
+      }
+
+      innerContainerElement.prepend(topElement);
+      outerContainerElement.appendChild(innerContainerElement);
+
+      MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
+
+      colorizeCode();
+    } else {
+      contentEntries.forEach((entry) => {
+        const element = document.createElement("div");
+
+        (entry.content || []).forEach((paragraphText) => {
+          const paragraph = document.createElement("p");
+          paragraph.innerHTML = colorizeString(paragraphText);
+          element.appendChild(paragraph);
+        });
+
+        innerContainerElement.appendChild(element);
+      });
+
+      if (resolvedLang !== LanguageManager.currentLang) {
+        const fallbackNotice = document.createElement('p');
+        fallbackNotice.classList.add('text-orange');
+        fallbackNotice.style.marginTop = '16px';
+        fallbackNotice.textContent = 'Localized content is not available yet. Showing English instead.';
+        innerContainerElement.appendChild(fallbackNotice);
+      }
+
+      outerContainerElement.appendChild(innerContainerElement);
+      MAIN_CONTENT_SECTION.appendChild(outerContainerElement);
+    }
+
+    setupProfilePicModal();
+  } finally {
+    isDisplayingContent = false;
   }
 }
 
@@ -963,6 +1065,8 @@ function initTouchListeners() {
   });
 }
 
+let languageChangeHandlerAdded = false;
+
 async function init() {
   // Initialize theme before anything else
   ThemeManager.init();
@@ -974,10 +1078,14 @@ async function init() {
   initSidebarScrollbar();
   initImageModal();
 
-  // Listen for language changes
-  window.addEventListener('languageChanged', async () => {
-    await displayContent();
-  });
+  // Listen for language changes (only add once)
+  if (!languageChangeHandlerAdded) {
+    window.addEventListener('languageChanged', async (event) => {
+      console.log('Language changed event received, reloading content');
+      await displayContent();
+    });
+    languageChangeHandlerAdded = true;
+  }
 
   await render(true, true);
 
@@ -1260,43 +1368,7 @@ const arduinoKeywords = [
 
 // Image Modal Functionality
 function initImageModal() {
-  const modal = document.getElementById("image-modal");
-  const modalImg = document.getElementById("modal-image");
-  const closeBtn = document.querySelector(".image-modal-close");
-  const profilePic = document.getElementById("terminal-profile-pic");
-
-  if (!modal || !modalImg || !closeBtn || !profilePic) {
-    return;
-  }
-
-  // Open modal when profile pic is clicked
-  profilePic.addEventListener("click", function() {
-    modal.classList.add("active");
-    modalImg.src = this.src;
-    document.body.style.overflow = "hidden"; // Prevent background scroll
-  });
-
-  // Close modal when X is clicked
-  closeBtn.addEventListener("click", function() {
-    modal.classList.remove("active");
-    document.body.style.overflow = "";
-  });
-
-  // Close modal when clicking outside the image
-  modal.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      modal.classList.remove("active");
-      document.body.style.overflow = "";
-    }
-  });
-
-  // Close modal with Escape key
-  document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape" && modal.classList.contains("active")) {
-      modal.classList.remove("active");
-      document.body.style.overflow = "";
-    }
-  });
+  setupProfilePicModal();
 }
 
 // Initialize when DOM is ready
